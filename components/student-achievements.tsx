@@ -3,6 +3,13 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "./ui/carousel";
 
 export default function StudentAchievements() {
   const achievements = [
@@ -56,82 +63,71 @@ export default function StudentAchievements() {
           </p>
         </motion.div>
 
-        <div className="space-y-12">
-          {achievements.map((achievement, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="relative shadow-lg rounded-3xl"
-            >
-              <div className="bg-white rounded-3xl p-6 md:p-0 overflow-hidden">
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-                  <div className="md:col-span-7 p-6 md:p-10 flex flex-col justify-center">
-                    <div className="space-y-6">
-                      <div>
-                        <h3 className="text-2xl md:text-3xl font-bold mb-2">
-                          {achievement.title}
-                        </h3>
-                        <div className="w-24 h-1 bg-orange-400 rounded-full mb-4"></div>
-                        <p className="text-xl font-medium">
-                          {achievement.subtitle}
-                        </p>
-                      </div>
-
-                      <motion.div
-                        className="bg-white shadow-lg rounded-2xl p-6 relative z-10"
-                        initial={{ x: -20, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.3, duration: 0.5 }}
-                      >
-                        <div className="space-y-2">
-                          <p className="font-bold text-lg">
-                            {achievement.studentName}
-                          </p>
-                          <p>
-                            {achievement.studentAge}{" "}
-                            {achievement.studentName.split(" ")[0]}{" "}
-                            {achievement.achievement}
-                          </p>
-                          <p className="text-orange-500 font-bold">
-                            {achievement.amount}
-                          </p>
-                        </div>
-                      </motion.div>
-                    </div>
-                  </div>
-
-                  <div className="md:col-span-5 relative">
-                    <div className="h-full">
-                      <img
-                        src={achievement.image || "/placeholder.svg"}
-                        alt={achievement.studentName}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {index < achievements.length - 1 && (
+        <Carousel className="max-w-5xl mx-auto">
+          <CarouselContent>
+            {achievements.map((achievement, index) => (
+              <CarouselItem key={index} className="p-4">
                 <motion.div
-                  className="absolute right-10 -bottom-6 z-20"
-                  initial={{ y: 10, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: 0.5, duration: 0.5 }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                  className="relative shadow-lg rounded-3xl"
                 >
-                  <div className="bg-white rounded-full p-3 shadow-lg">
-                    <ArrowRight className="h-6 w-6 text-orange-500" />
+                  <div className="bg-white rounded-3xl p-6 md:p-0 overflow-hidden">
+                    <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+                      <div className="md:col-span-7 p-6 md:p-10 flex flex-col justify-center">
+                        <div className="space-y-6">
+                          <div>
+                            <h3 className="text-2xl md:text-3xl font-bold mb-2">
+                              {achievement.title}
+                            </h3>
+                            <div className="w-24 h-1 bg-orange-400 rounded-full mb-4"></div>
+                            <p className="text-xl font-medium">
+                              {achievement.subtitle}
+                            </p>
+                          </div>
+                          <motion.div
+                            className="bg-white shadow-lg rounded-2xl p-6 relative z-10"
+                            initial={{ x: -20, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.3, duration: 0.5 }}
+                          >
+                            <div className="space-y-2">
+                              <p className="font-bold text-lg">
+                                {achievement.studentName}
+                              </p>
+                              <p>
+                                {achievement.studentAge}{" "}
+                                {achievement.studentName.split(" ")[0]}{" "}
+                                {achievement.achievement}
+                              </p>
+                              <p className="text-orange-500 font-bold">
+                                {achievement.amount}
+                              </p>
+                            </div>
+                          </motion.div>
+                        </div>
+                      </div>
+                      <div className="md:col-span-5 relative">
+                        <div className="h-full">
+                          <img
+                            src={achievement.image || "/placeholder.svg"}
+                            alt={achievement.studentName}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </motion.div>
-              )}
-            </motion.div>
-          ))}
-        </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
 
         <motion.div
           className="mt-16 text-center"
