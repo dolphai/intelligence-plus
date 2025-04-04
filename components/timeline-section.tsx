@@ -48,40 +48,47 @@ export default function TimelineSection() {
           </p>
         </motion.div>
 
-        <div className="relative max-w-3xl mx-auto">
-          <div className="absolute left-4 md:left-1/2 h-full w-0.5 bg-violet-200 transform md:-translate-x-1/2"></div>
+        <div className="w-full px-4 py-12 md:mt-28">
+          <div className="relative flex flex-col md:flex-row md:justify-between items-center">
+            <div className="absolute md:top-1/2 top-0 md:left-0 md:right-0 left-4 h-full md:h-1 w-1 md:w-full bg-violet-200 z-0" />
 
-          {timelineEvents.map((event, index) => (
-            <motion.div
-              key={index}
-              className="relative mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
-            >
+            {timelineEvents.map((event, index) => (
               <div
-                className={`flex flex-col md:flex-row items-center ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}
+                key={index}
+                className="relative md:w-1/4 w-full flex flex-col items-center md:items-center mb-10 md:mb-0"
               >
-                <div className="md:w-1/2 flex justify-center md:justify-end md:pr-8 md:pl-0 pl-8 mb-4 md:mb-0">
-                  <div
-                    className={`p-4 rounded-lg shadow-md bg-white ${index % 2 === 0 ? "md:text-right" : ""}`}
-                  >
-                    <div className="flex items-center mb-2">
-                      <CalendarDays className="h-4 w-4 text-violet-600 mr-2" />
-                      <span className="text-sm text-violet-600 font-medium">
-                        {event.date}
-                      </span>
-                    </div>
-                    <h3 className="text-lg font-bold mb-1">{event.title}</h3>
-                    <p className="text-gray-600">{event.description}</p>
+                <div
+                  className={`hidden md:block mb-6 md:mb-0 md:absolute md:w-64 ${
+                    index % 2 === 0
+                      ? "bottom-[30%] translate-y-full"
+                      : "top-[30%] -translate-y-full"
+                  }`}
+                >
+                  <div className="p-4 rounded-xl shadow-md text-center">
+                    <h3 className="text-violet-300 font-semibold">
+                      {event.date}
+                    </h3>
+                    <h4 className="text-lg font-bold mt-1">{event.title}</h4>
+                    <p className="text-sm mt-2">{event.description}</p>
                   </div>
                 </div>
 
-                <div className="absolute left-4 top-1/2 -translate-x-1/2 md:left-1/2 w-4 h-4 rounded-full bg-violet-600 border-4 border-white transform md:-translate-x-1/2"></div>
+                {/* Dot */}
+                <div className="z-10 absolute md:static left-5 top-1/2 -translate-y-1/2 md:-translate-y-0 -translate-x-1/2 w-5 h-5 rounded-full bg-violet-500 border-4 border-white shadow-lg" />
+
+                {/* Mobile card */}
+                <div className="md:hidden mt-4 w-full">
+                  <div className="ml-5 p-4 rounded-xl shadow-md">
+                    <h3 className="text-violet-400 font-semibold">
+                      {event.date}
+                    </h3>
+                    <h4 className="text-lg font-bold mt-1">{event.title}</h4>
+                    <p className="text-sm mt-2">{event.description}</p>
+                  </div>
+                </div>
               </div>
-            </motion.div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,10 +34,12 @@ export default function Navbar() {
           {/* Login / Signup */}
           <div className="hidden md:flex space-x-4">
             <button className="px-4 py-2 text-violet-600 border border-violet-600 rounded-lg hover:bg-violet-600 hover:text-white">
-              Login
-            </button>
-            <button className="px-4 py-2 bg-violet-600 text-white rounded-lg hover:bg-violet-700">
-              Sign Up
+              <Link
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfBSD35zx1tlJ9H-FCfv2N1VsaEaKuMi8FfOH7cAmQSiGRV0w/viewform"
+                target="_blank"
+              >
+                Register a School
+              </Link>
             </button>
           </div>
 

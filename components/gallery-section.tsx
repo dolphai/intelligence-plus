@@ -1,20 +1,32 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { useState } from "react"
-import { Dialog, DialogContent } from "@/components/ui/dialog"
+import { motion } from "framer-motion";
+import { useState } from "react";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 export default function GallerySection() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null)
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const images = [
-    { src: "/placeholder.svg?height=300&width=400", alt: "Students collaborating on a project" },
+    {
+      src: "",
+      alt: "Students collaborating on a project",
+    },
     { src: "/placeholder.svg?height=300&width=400", alt: "Award ceremony" },
-    { src: "/placeholder.svg?height=300&width=400", alt: "Classroom innovation" },
-    { src: "/placeholder.svg?height=300&width=400", alt: "STEM challenge in action" },
+    {
+      src: "/placeholder.svg?height=300&width=400",
+      alt: "Classroom innovation",
+    },
+    {
+      src: "/placeholder.svg?height=300&width=400",
+      alt: "STEM challenge in action",
+    },
     { src: "/placeholder.svg?height=300&width=400", alt: "Teacher workshop" },
-    { src: "/placeholder.svg?height=300&width=400", alt: "Student presentation" },
-  ]
+    {
+      src: "/placeholder.svg?height=300&width=400",
+      alt: "Student presentation",
+    },
+  ];
 
   return (
     <section className="w-full py-12 md:py-24 bg-gray-50">
@@ -26,9 +38,11 @@ export default function GallerySection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Image Gallery</h2>
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            School Partners
+          </h2>
           <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Moments captured from our events and programs
+            Our School partners who entrusted us with their students
           </p>
         </motion.div>
 
@@ -56,15 +70,21 @@ export default function GallerySection() {
           ))}
         </div>
 
-        <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+        <Dialog
+          open={!!selectedImage}
+          onOpenChange={() => setSelectedImage(null)}
+        >
           <DialogContent className="max-w-4xl p-0 overflow-hidden">
             {selectedImage && (
-              <img src={selectedImage || "/placeholder.svg"} alt="Gallery image" className="w-full h-auto" />
+              <img
+                src={selectedImage || "/placeholder.svg"}
+                alt="Gallery image"
+                className="w-full h-auto"
+              />
             )}
           </DialogContent>
         </Dialog>
       </div>
     </section>
-  )
+  );
 }
-
