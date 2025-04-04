@@ -9,22 +9,8 @@ export default function GallerySection() {
 
   const images = [
     {
-      src: "",
+      src: "https://www.logiqids.com/images/schools.png",
       alt: "Students collaborating on a project",
-    },
-    { src: "/placeholder.svg?height=300&width=400", alt: "Award ceremony" },
-    {
-      src: "/placeholder.svg?height=300&width=400",
-      alt: "Classroom innovation",
-    },
-    {
-      src: "/placeholder.svg?height=300&width=400",
-      alt: "STEM challenge in action",
-    },
-    { src: "/placeholder.svg?height=300&width=400", alt: "Teacher workshop" },
-    {
-      src: "/placeholder.svg?height=300&width=400",
-      alt: "Student presentation",
     },
   ];
 
@@ -46,7 +32,7 @@ export default function GallerySection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="flex items-center justify-center w-full gap-4">
           {images.map((image, index) => (
             <motion.div
               key={index}
@@ -61,7 +47,7 @@ export default function GallerySection() {
               <img
                 src={image.src || "/placeholder.svg"}
                 alt={image.alt}
-                className="w-full h-64 object-cover transition-transform duration-500 hover:scale-110"
+                className="w-screen h-64 object-cover transition-transform duration-500 hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
                 <p className="text-white p-4 text-sm">{image.alt}</p>
