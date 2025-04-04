@@ -1,14 +1,21 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import Image from "next/image"
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Badge } from "@/components/ui/badge"
-import { Progress } from "@/components/ui/progress"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import Link from "next/link";
+import Image from "next/image";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Badge } from "@/components/ui/badge";
+import { Progress } from "@/components/ui/progress";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Award,
   Users,
@@ -23,10 +30,10 @@ import {
   FileText,
   Share2,
   Bookmark,
-} from "lucide-react"
+} from "lucide-react";
 
 export default function ProfessionalDashboard() {
-  const [notifications, setNotifications] = useState(4)
+  const [notifications, setNotifications] = useState(4);
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -38,19 +45,34 @@ export default function ProfessionalDashboard() {
             <span className="text-xl font-bold">ABC Learning</span>
           </div>
           <nav className="hidden md:flex gap-6">
-            <Link href="/dashboard/professional" className="text-sm font-medium text-primary">
+            <Link
+              href="/dashboard/professional"
+              className="text-sm font-medium text-primary"
+            >
               Dashboard
             </Link>
-            <Link href="/courses" className="text-sm font-medium hover:text-primary">
+            <Link
+              href="/courses"
+              className="text-sm font-medium hover:text-primary"
+            >
               Courses
             </Link>
-            <Link href="/challenges" className="text-sm font-medium hover:text-primary">
+            <Link
+              href="/challenges"
+              className="text-sm font-medium hover:text-primary"
+            >
               Challenges
             </Link>
-            <Link href="/resources" className="text-sm font-medium hover:text-primary">
+            <Link
+              href="/resources"
+              className="text-sm font-medium hover:text-primary"
+            >
               Resources
             </Link>
-            <Link href="/network" className="text-sm font-medium hover:text-primary">
+            <Link
+              href="/network"
+              className="text-sm font-medium hover:text-primary"
+            >
               Network
             </Link>
           </nav>
@@ -65,12 +87,17 @@ export default function ProfessionalDashboard() {
             </Button>
             <div className="flex items-center gap-2">
               <Avatar>
-                <AvatarImage src="/placeholder.svg?height=32&width=32" alt="User" />
+                <AvatarImage
+                  src="/placeholder.svg?height=32&width=32"
+                  alt="User"
+                />
                 <AvatarFallback>JD</AvatarFallback>
               </Avatar>
               <div className="hidden md:block">
                 <p className="text-sm font-medium">John Doe</p>
-                <p className="text-xs text-muted-foreground">Software Engineer</p>
+                <p className="text-xs text-muted-foreground">
+                  Software Engineer
+                </p>
               </div>
             </div>
           </div>
@@ -85,7 +112,8 @@ export default function ProfessionalDashboard() {
               <div className="space-y-2">
                 <h1 className="text-2xl font-bold">Welcome back, John!</h1>
                 <p className="max-w-md">
-                  You have <strong>4 upcoming deadlines</strong> and <strong>2 new challenge rounds</strong> this week.
+                  You have <strong>4 upcoming deadlines</strong> and{" "}
+                  <strong>2 new challenge rounds</strong> this week.
                 </p>
               </div>
               <div className="flex items-center gap-2 bg-primary-foreground/10 p-3 rounded-lg">
@@ -106,175 +134,220 @@ export default function ProfessionalDashboard() {
             {/* Main Content */}
             <div className="md:col-span-2 space-y-6">
               {/* Learning Progress */}
-              <Card>
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <div className="space-y-1">
-                    <CardTitle>My Learning Progress</CardTitle>
-                    <CardDescription>Track your professional development</CardDescription>
-                  </div>
-                  <Tabs defaultValue="courses">
+              <Tabs defaultValue="courses">
+                <Card>
+                  <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                    <div className="space-y-1">
+                      <CardTitle>My Learning Progress</CardTitle>
+                      <CardDescription>
+                        Track your professional development
+                      </CardDescription>
+                    </div>
                     <TabsList>
                       <TabsTrigger value="courses">Courses</TabsTrigger>
                       <TabsTrigger value="challenges">Challenges</TabsTrigger>
                     </TabsList>
-                  </Tabs>
-                </CardHeader>
-                <CardContent>
-                  <TabsContent value="courses" className="space-y-4 mt-0">
-                    {professionalCourses.map((course) => (
-                      <div key={course.id} className="flex items-center space-x-4">
-                        <div className="relative h-16 w-16 overflow-hidden rounded-md">
-                          <Image
-                            src={course.image || "/placeholder.svg"}
-                            alt={course.title}
-                            fill
-                            className="object-cover"
-                          />
-                        </div>
-                        <div className="flex-1 space-y-1">
-                          <div className="flex items-center justify-between">
-                            <h3 className="font-medium">{course.title}</h3>
-                            <Badge variant="outline">{course.progress}%</Badge>
+                  </CardHeader>
+                  <CardContent>
+                    <TabsContent value="courses" className="space-y-4 mt-0">
+                      {professionalCourses.map((course) => (
+                        <div
+                          key={course.id}
+                          className="flex items-center space-x-4"
+                        >
+                          <div className="relative h-16 w-16 overflow-hidden rounded-md">
+                            <Image
+                              src={course.image || "/placeholder.svg"}
+                              alt={course.title}
+                              fill
+                              className="object-cover"
+                            />
                           </div>
-                          <Progress value={course.progress} className="h-2" />
-                          <div className="flex items-center justify-between text-xs text-muted-foreground">
-                            <div className="flex items-center">
-                              <Clock className="mr-1 h-3 w-3" />
-                              <span>Last accessed: {course.lastAccessed}</span>
-                            </div>
-                            <div className="flex items-center">
-                              <CheckCircle className="mr-1 h-3 w-3" />
-                              <span>
-                                {course.completedModules} of {course.totalModules} modules
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                    <Button variant="outline" className="w-full">
-                      View All Courses
-                    </Button>
-                  </TabsContent>
-                  <TabsContent value="challenges" className="space-y-4 mt-0">
-                    {professionalChallenges.map((challenge) => (
-                      <Card key={challenge.id} className="overflow-hidden">
-                        <CardHeader className="pb-2">
-                          <div className="flex justify-between items-start">
-                            <Badge variant="default" className="bg-orange-500 hover:bg-orange-600">
-                              Round {challenge.currentRound} of {challenge.totalRounds}
-                            </Badge>
-                            <div className="flex items-center gap-2">
-                              <Calendar size={14} />
-                              <span className="text-xs text-muted-foreground">{challenge.deadline}</span>
-                            </div>
-                          </div>
-                          <CardTitle className="text-base mt-2">{challenge.title}</CardTitle>
-                        </CardHeader>
-                        <CardContent className="pb-2">
-                          <div className="space-y-2">
-                            <div className="flex items-center justify-between text-sm">
-                              <span className="font-medium">Status:</span>
-                              <Badge variant="outline" className="text-green-500 border-green-500">
-                                {challenge.status}
+                          <div className="flex-1 space-y-1">
+                            <div className="flex items-center justify-between">
+                              <h3 className="font-medium">{course.title}</h3>
+                              <Badge variant="outline">
+                                {course.progress}%
                               </Badge>
                             </div>
-                            <div className="flex items-center justify-between text-sm">
-                              <span className="font-medium">Your Rank:</span>
-                              <span>
-                                {challenge.rank} of {challenge.participants}
-                              </span>
+                            <Progress value={course.progress} className="h-2" />
+                            <div className="flex items-center justify-between text-xs text-muted-foreground">
+                              <div className="flex items-center">
+                                <Clock className="mr-1 h-3 w-3" />
+                                <span>
+                                  Last accessed: {course.lastAccessed}
+                                </span>
+                              </div>
+                              <div className="flex items-center">
+                                <CheckCircle className="mr-1 h-3 w-3" />
+                                <span>
+                                  {course.completedModules} of{" "}
+                                  {course.totalModules} modules
+                                </span>
+                              </div>
                             </div>
                           </div>
-                        </CardContent>
-                        <CardFooter>
-                          <Button className="w-full" size="sm">
-                            {challenge.status === "Submission Open" ? "Submit Entry" : "View Details"}
-                          </Button>
-                        </CardFooter>
-                      </Card>
-                    ))}
-                    <Button variant="outline" className="w-full">
-                      View All Challenges
-                    </Button>
-                  </TabsContent>
-                </CardContent>
-              </Card>
-
-              {/* Skill Development */}
-              <Card>
-                <CardHeader>
-                  <CardTitle>Skill Development</CardTitle>
-                  <CardDescription>Track your professional skills progress</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    {professionalSkills.map((skill) => (
-                      <div key={skill.name} className="space-y-1">
-                        <div className="flex items-center justify-between">
-                          <h3 className="text-sm font-medium">{skill.name}</h3>
-                          <span className="text-sm text-muted-foreground">{skill.level}/10</span>
                         </div>
-                        <Progress value={skill.level * 10} className="h-2" />
-                        <div className="flex items-center justify-between text-xs text-muted-foreground">
-                          <span>{skill.courses} courses completed</span>
-                          <span>{skill.nextMilestone}</span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-                <CardFooter>
-                  <Button variant="outline" className="w-full">
-                    View Detailed Skills Report
-                  </Button>
-                </CardFooter>
-              </Card>
+                      ))}
+                      <Button variant="outline" className="w-full">
+                        View All Courses
+                      </Button>
+                    </TabsContent>
+                    <TabsContent value="challenges" className="space-y-4 mt-0">
+                      {professionalChallenges.map((challenge) => (
+                        <Card key={challenge.id} className="overflow-hidden">
+                          <CardHeader className="pb-2">
+                            <div className="flex justify-between items-start">
+                              <Badge
+                                variant="default"
+                                className="bg-orange-500 hover:bg-orange-600"
+                              >
+                                Round {challenge.currentRound} of{" "}
+                                {challenge.totalRounds}
+                              </Badge>
+                              <div className="flex items-center gap-2">
+                                <Calendar size={14} />
+                                <span className="text-xs text-muted-foreground">
+                                  {challenge.deadline}
+                                </span>
+                              </div>
+                            </div>
+                            <CardTitle className="text-base mt-2">
+                              {challenge.title}
+                            </CardTitle>
+                          </CardHeader>
+                          <CardContent className="pb-2">
+                            <div className="space-y-2">
+                              <div className="flex items-center justify-between text-sm">
+                                <span className="font-medium">Status:</span>
+                                <Badge
+                                  variant="outline"
+                                  className="text-green-500 border-green-500"
+                                >
+                                  {challenge.status}
+                                </Badge>
+                              </div>
+                              <div className="flex items-center justify-between text-sm">
+                                <span className="font-medium">Your Rank:</span>
+                                <span>
+                                  {challenge.rank} of {challenge.participants}
+                                </span>
+                              </div>
+                            </div>
+                          </CardContent>
+                          <CardFooter>
+                            <Button className="w-full" size="sm">
+                              {challenge.status === "Submission Open"
+                                ? "Submit Entry"
+                                : "View Details"}
+                            </Button>
+                          </CardFooter>
+                        </Card>
+                      ))}
+                      <Button variant="outline" className="w-full">
+                        View All Challenges
+                      </Button>
+                    </TabsContent>
+                  </CardContent>
+                </Card>
 
-              {/* Career Resources */}
-              <Card>
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <div className="space-y-1">
-                    <CardTitle>Career Resources</CardTitle>
-                    <CardDescription>Professional development materials</CardDescription>
-                  </div>
-                  <Link href="/resources">
-                    <Button variant="ghost" size="sm">
-                      View All
-                    </Button>
-                  </Link>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {careerResources.map((resource, index) => (
-                      <Card key={index} className="overflow-hidden">
-                        <CardHeader className="pb-2">
-                          <div className="flex items-center gap-2">
-                            {resource.type === "document" && <FileText className="h-4 w-4 text-primary" />}
-                            {resource.type === "video" && <BookMarked className="h-4 w-4 text-primary" />}
-                            {resource.type === "template" && <Download className="h-4 w-4 text-primary" />}
-                            <CardTitle className="text-base">{resource.title}</CardTitle>
+                {/* Skill Development */}
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Skill Development</CardTitle>
+                    <CardDescription>
+                      Track your professional skills progress
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-4">
+                      {professionalSkills.map((skill) => (
+                        <div key={skill.name} className="space-y-1">
+                          <div className="flex items-center justify-between">
+                            <h3 className="text-sm font-medium">
+                              {skill.name}
+                            </h3>
+                            <span className="text-sm text-muted-foreground">
+                              {skill.level}/10
+                            </span>
                           </div>
-                        </CardHeader>
-                        <CardContent className="pb-2">
-                          <p className="text-sm text-muted-foreground">{resource.description}</p>
-                        </CardContent>
-                        <CardFooter className="flex justify-between">
-                          <Button variant="ghost" size="sm" className="gap-1">
-                            <Bookmark className="h-4 w-4" /> Save
-                          </Button>
-                          <Button variant="ghost" size="sm" className="gap-1">
-                            <Share2 className="h-4 w-4" /> Share
-                          </Button>
-                          <Button size="sm">
-                            {resource.type === "document" ? "Read" : resource.type === "video" ? "Watch" : "Download"}
-                          </Button>
-                        </CardFooter>
-                      </Card>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+                          <Progress value={skill.level * 10} className="h-2" />
+                          <div className="flex items-center justify-between text-xs text-muted-foreground">
+                            <span>{skill.courses} courses completed</span>
+                            <span>{skill.nextMilestone}</span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                  <CardFooter>
+                    <Button variant="outline" className="w-full">
+                      View Detailed Skills Report
+                    </Button>
+                  </CardFooter>
+                </Card>
+
+                {/* Career Resources */}
+                <Card>
+                  <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                    <div className="space-y-1">
+                      <CardTitle>Career Resources</CardTitle>
+                      <CardDescription>
+                        Professional development materials
+                      </CardDescription>
+                    </div>
+                    <Link href="/resources">
+                      <Button variant="ghost" size="sm">
+                        View All
+                      </Button>
+                    </Link>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {careerResources.map((resource, index) => (
+                        <Card key={index} className="overflow-hidden">
+                          <CardHeader className="pb-2">
+                            <div className="flex items-center gap-2">
+                              {resource.type === "document" && (
+                                <FileText className="h-4 w-4 text-primary" />
+                              )}
+                              {resource.type === "video" && (
+                                <BookMarked className="h-4 w-4 text-primary" />
+                              )}
+                              {resource.type === "template" && (
+                                <Download className="h-4 w-4 text-primary" />
+                              )}
+                              <CardTitle className="text-base">
+                                {resource.title}
+                              </CardTitle>
+                            </div>
+                          </CardHeader>
+                          <CardContent className="pb-2">
+                            <p className="text-sm text-muted-foreground">
+                              {resource.description}
+                            </p>
+                          </CardContent>
+                          <CardFooter className="flex justify-between">
+                            <Button variant="ghost" size="sm" className="gap-1">
+                              <Bookmark className="h-4 w-4" /> Save
+                            </Button>
+                            <Button variant="ghost" size="sm" className="gap-1">
+                              <Share2 className="h-4 w-4" /> Share
+                            </Button>
+                            <Button size="sm">
+                              {resource.type === "document"
+                                ? "Read"
+                                : resource.type === "video"
+                                  ? "Watch"
+                                  : "Download"}
+                            </Button>
+                          </CardFooter>
+                        </Card>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </Tabs>
             </div>
 
             {/* Sidebar */}
@@ -287,12 +360,17 @@ export default function ProfessionalDashboard() {
                 <CardContent>
                   <div className="flex flex-col items-center space-y-4">
                     <Avatar className="h-20 w-20">
-                      <AvatarImage src="/placeholder.svg?height=80&width=80" alt="User" />
+                      <AvatarImage
+                        src="/placeholder.svg?height=80&width=80"
+                        alt="User"
+                      />
                       <AvatarFallback>JD</AvatarFallback>
                     </Avatar>
                     <div className="text-center">
                       <h3 className="font-medium">John Doe</h3>
-                      <p className="text-sm text-muted-foreground">Software Engineer • Premium Member</p>
+                      <p className="text-sm text-muted-foreground">
+                        Software Engineer • Premium Member
+                      </p>
                     </div>
                     <div className="grid grid-cols-3 gap-4 w-full text-center">
                       <div className="space-y-1">
@@ -301,11 +379,15 @@ export default function ProfessionalDashboard() {
                       </div>
                       <div className="space-y-1">
                         <p className="text-2xl font-bold">5</p>
-                        <p className="text-xs text-muted-foreground">Challenges</p>
+                        <p className="text-xs text-muted-foreground">
+                          Challenges
+                        </p>
                       </div>
                       <div className="space-y-1">
                         <p className="text-2xl font-bold">18</p>
-                        <p className="text-xs text-muted-foreground">Certificates</p>
+                        <p className="text-xs text-muted-foreground">
+                          Certificates
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -332,13 +414,20 @@ export default function ProfessionalDashboard() {
                           <Clock className="h-4 w-4" />
                         </div>
                         <div className="space-y-1">
-                          <p className="font-medium text-sm">{deadline.title}</p>
+                          <p className="font-medium text-sm">
+                            {deadline.title}
+                          </p>
                           <div className="flex items-center text-xs text-muted-foreground">
                             <Calendar className="mr-1 h-3 w-3" />
                             <span>{deadline.date}</span>
                             {deadline.daysLeft <= 2 && (
-                              <Badge variant="outline" className="ml-2 text-red-600 border-red-600 text-[10px]">
-                                {deadline.daysLeft === 0 ? "Due Today" : `${deadline.daysLeft} days left`}
+                              <Badge
+                                variant="outline"
+                                className="ml-2 text-red-600 border-red-600 text-[10px]"
+                              >
+                                {deadline.daysLeft === 0
+                                  ? "Due Today"
+                                  : `${deadline.daysLeft} days left`}
                               </Badge>
                             )}
                           </div>
@@ -362,7 +451,9 @@ export default function ProfessionalDashboard() {
                           <Award className="h-4 w-4" />
                         </div>
                         <div className="space-y-1">
-                          <p className="font-medium text-sm">{certification.title}</p>
+                          <p className="font-medium text-sm">
+                            {certification.title}
+                          </p>
                           <div className="flex items-center text-xs text-muted-foreground">
                             <Calendar className="mr-1 h-3 w-3" />
                             <span>Issued: {certification.issueDate}</span>
@@ -424,15 +515,27 @@ export default function ProfessionalDashboard() {
                     {networkActivity.map((activity, index) => (
                       <div key={index} className="flex items-start space-x-3">
                         <Avatar className="h-8 w-8">
-                          <AvatarImage src={activity.userAvatar} alt={activity.userName} />
-                          <AvatarFallback>{activity.userInitials}</AvatarFallback>
+                          <AvatarImage
+                            src={activity.userAvatar}
+                            alt={activity.userName}
+                          />
+                          <AvatarFallback>
+                            {activity.userInitials}
+                          </AvatarFallback>
                         </Avatar>
                         <div className="space-y-1">
                           <p className="text-sm">
-                            <span className="font-medium">{activity.userName}</span>
-                            <span className="text-muted-foreground"> {activity.action}</span>
+                            <span className="font-medium">
+                              {activity.userName}
+                            </span>
+                            <span className="text-muted-foreground">
+                              {" "}
+                              {activity.action}
+                            </span>
                           </p>
-                          <p className="text-xs text-muted-foreground">{activity.time}</p>
+                          <p className="text-xs text-muted-foreground">
+                            {activity.time}
+                          </p>
                         </div>
                       </div>
                     ))}
@@ -449,7 +552,7 @@ export default function ProfessionalDashboard() {
         </div>
       </main>
     </div>
-  )
+  );
 }
 
 // Sample data
@@ -481,7 +584,7 @@ const professionalCourses = [
     completedModules: 4,
     totalModules: 8,
   },
-]
+];
 
 const professionalChallenges = [
   {
@@ -504,7 +607,7 @@ const professionalChallenges = [
     rank: "42",
     participants: "3,500+",
   },
-]
+];
 
 const professionalSkills = [
   {
@@ -531,7 +634,7 @@ const professionalSkills = [
     courses: 7,
     nextMilestone: "Expert level achieved",
   },
-]
+];
 
 const careerResources = [
   {
@@ -554,7 +657,7 @@ const careerResources = [
     description: "Video course on effective leadership in technical teams",
     type: "video",
   },
-]
+];
 
 const professionalDeadlines = [
   {
@@ -577,7 +680,7 @@ const professionalDeadlines = [
     date: "Oct 28, 2023",
     daysLeft: 2,
   },
-]
+];
 
 const professionalCertifications = [
   {
@@ -592,7 +695,7 @@ const professionalCertifications = [
     title: "Cloud Architecture Fundamentals",
     issueDate: "Aug 20, 2023",
   },
-]
+];
 
 const professionalRecommendedCourses = [
   {
@@ -610,7 +713,7 @@ const professionalRecommendedCourses = [
     image: "/placeholder.svg?height=40&width=40",
     students: "1,879",
   },
-]
+];
 
 const networkActivity = [
   {
@@ -634,5 +737,4 @@ const networkActivity = [
     action: "shared a resource: 'AI Ethics Guide'",
     time: "2 days ago",
   },
-]
-
+];
