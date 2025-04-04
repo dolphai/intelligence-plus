@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Button } from "./ui/button";
+import Link from "next/link";
 
 export default function GallerySection() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);

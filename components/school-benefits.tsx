@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import { Award, BarChart, BookOpen, Lightbulb } from "lucide-react";
+import { Button } from "./ui/button";
+import Link from "next/link";
 
 export default function SchoolBenefits() {
   const benefits = [
@@ -72,6 +74,13 @@ export default function SchoolBenefits() {
           <p className="max-w-[700px] text-gray-200 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
             Partner with IntelligentPlus and transform your educational outcomes
           </p>
+          <Button className="bg-orange-600 hover:bg-violet-700 ">
+            <Link
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfBSD35zx1tlJ9H-FCfv2N1VsaEaKuMi8FfOH7cAmQSiGRV0w/viewform"
+              target="_blank"
+            ></Link>
+            Claim Your Benefits
+          </Button>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl place-items-center">

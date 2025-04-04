@@ -10,6 +10,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "./ui/carousel";
+import Link from "next/link";
 
 export default function StudentAchievements() {
   const achievements = [
@@ -143,7 +144,12 @@ export default function StudentAchievements() {
             size="lg"
             className="bg-orange-500 hover:bg-orange-600 text-white"
           >
-            Join Our Program
+            <Link
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfBSD35zx1tlJ9H-FCfv2N1VsaEaKuMi8FfOH7cAmQSiGRV0w/viewform"
+              target="_blank"
+            >
+              Join Our Program
+            </Link>
           </Button>
         </motion.div>
       </div>

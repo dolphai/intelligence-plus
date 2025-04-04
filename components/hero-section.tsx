@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { motion } from "framer-motion"
-import { ArrowRight, Brain } from "lucide-react"
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import { ArrowRight, Brain } from "lucide-react";
 
 export default function HeroSection() {
   return (
@@ -24,7 +24,8 @@ export default function HeroSection() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.7 }}
             >
-              Empowering the Next Generation of <span className="text-violet-600">Innovators</span>
+              Empowering the Next Generation of{" "}
+              <span className="text-violet-600">Innovators</span>
             </motion.h1>
             <motion.p
               className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400"
@@ -32,8 +33,9 @@ export default function HeroSection() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.7 }}
             >
-              IntelligentPlus provides cutting-edge educational courses and challenges that prepare students for the
-              future while helping schools excel in STEM education.
+              IntelligentPlus provides cutting-edge educational courses and
+              challenges that prepare students for the future while helping
+              schools excel in STEM education.
             </motion.p>
             <motion.div
               className="flex flex-col gap-2 min-[400px]:flex-row"
@@ -42,11 +44,7 @@ export default function HeroSection() {
               transition={{ delay: 0.6, duration: 0.5 }}
             >
               <Button size="lg" className="bg-violet-600 hover:bg-violet-700">
-                Explore Courses
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button variant="outline" size="lg">
-                Join Challenge
+                Onboard your School
               </Button>
             </motion.div>
           </motion.div>
@@ -59,8 +57,12 @@ export default function HeroSection() {
             <div className="relative w-full h-[400px] rounded-2xl overflow-hidden bg-gradient-to-br from-violet-400 to-indigo-600 p-8 flex items-center justify-center">
               <Brain className="w-32 h-32 text-white opacity-20 absolute" />
               <div className="relative z-10 text-center">
-                <h3 className="text-2xl font-bold text-white mb-4">Intelligent Learning Platform</h3>
-                <p className="text-white/80 mb-6">Adaptive courses that evolve with student progress</p>
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  Intelligent Learning Platform
+                </h3>
+                <p className="text-white/80 mb-6">
+                  Adaptive courses that evolve with student progress
+                </p>
                 <Button variant="secondary" size="sm">
                   Learn How It Works
                 </Button>
@@ -95,6 +97,5 @@ export default function HeroSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-
