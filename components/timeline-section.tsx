@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CalendarDays } from "lucide-react";
 
 export default function TimelineSection() {
   const timelineEvents = [
@@ -48,7 +47,7 @@ export default function TimelineSection() {
           </p>
         </motion.div>
 
-        <div className="w-full px-4 py-12 md:mt-28">
+        <div className="w-full px-4 py-12 md:mt-28 min-h-[150px]">
           <div className="relative flex flex-col md:flex-row md:justify-between items-center">
             <div className="absolute md:top-1/2 top-0 md:left-0 md:right-0 left-4 h-full md:h-1 w-1 md:w-full bg-violet-200 z-0" />
 

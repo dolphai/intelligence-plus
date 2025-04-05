@@ -1,8 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import Link from "next/link";
 import {
   Carousel,
   CarouselContent,
@@ -10,24 +10,20 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "./ui/carousel";
-import Link from "next/link";
 
 export default function StudentAchievements() {
   const achievements = [
     {
-      title: "Most students struggle with showcasing their Stand Out Factor",
-      subtitle: "IntelligentPlus makes this Easy",
-      studentName: "Aisha Johnson",
-      studentAge: "16 years old",
+      title: "13 Year old Amogh Holla Recycling fabrics",
+      studentName: "Amogh Holla ",
+      studentAge: "13 years old",
       achievement:
         "Developed an AI-powered app that won the National Science Fair",
-      amount: "$25,000 scholarship",
-      image: "/placeholder.svg?height=400&width=300",
+      image: "https://www.youtube.com/watch?v=-plf4rh8PN0",
     },
     {
-      title: "Turning passion into recognition",
-      subtitle: "Our platform provides the tools",
-      studentName: "Michael Chen",
+      title: "Trailblazer fellow featured at Skill Titans",
+      studentName: "Satyaj Hedaoo",
       studentAge: "15 years old",
       achievement:
         "Created a community recycling program recognized by the EPA",
@@ -35,10 +31,11 @@ export default function StudentAchievements() {
       image: "/placeholder.svg?height=400&width=300",
     },
     {
-      title: "Breaking barriers in STEM",
+      title:
+        "14 year old creates app to find out the expiry dates of medicines - Medimate",
       subtitle: "With the right guidance",
       studentName: "Sofia Rodriguez",
-      studentAge: "17 years old",
+      studentAge: "14 years old",
       achievement:
         "Published research on renewable energy in a peer-reviewed journal",
       amount: "Accepted to MIT",
@@ -64,7 +61,12 @@ export default function StudentAchievements() {
           </p>
         </motion.div>
 
-        <Carousel className="max-w-5xl mx-auto">
+        <Carousel
+          className="max-w-5xl mx-auto"
+          opts={{
+            loop: true,
+          }}
+        >
           <CarouselContent>
             {achievements.map((achievement, index) => (
               <CarouselItem key={index} className="p-4">
@@ -113,11 +115,12 @@ export default function StudentAchievements() {
                       </div>
                       <div className="md:col-span-5 relative">
                         <div className="h-full">
-                          <img
-                            src={achievement.image || "/placeholder.svg"}
-                            alt={achievement.studentName}
-                            className="w-full h-full object-cover"
-                          />
+                          <iframe
+                            className="w-full h-full rounded-3xl"
+                            src="https://www.youtube.com/embed/-plf4rh8PN0?si=S72ilIUu2YGFLC87"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          ></iframe>
                         </div>
                       </div>
                     </div>

@@ -20,12 +20,6 @@ export default function Navbar() {
             <a href="#" className="text-gray-700 hover:text-violet-600">
               AboutUs
             </a>
-            <a
-              href="/innoventure"
-              className="text-gray-700 hover:text-violet-600"
-            >
-              Innoventure
-            </a>
             <a href="#" className="text-gray-700 hover:text-violet-600">
               Contact
             </a>

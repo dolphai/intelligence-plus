@@ -1,40 +1,32 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Play } from "lucide-react"
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function TestimonialsSection() {
-  const [activeIndex, setActiveIndex] = useState(0)
-  const [isPlaying, setIsPlaying] = useState(Array(3).fill(false))
-
   const testimonials = [
     {
-      name: "Principal James Wilson",
-      school: "Lincoln High School",
-      thumbnail: "/placeholder.svg?height=300&width=500",
-      quote: "The impact on our STEM program has been remarkable. Student engagement is at an all-time high.",
+      name: "Radha Baruah",
+      school: "Principal Sanskriti the Gurukul, Assam",
+      link: "https://www.youtube.com/embed/Y8xg18-FwYo",
+      quote:
+        "Children gain exposure to expertise, that is beyond what the school could provide. It’s so interesting to see the kind of solutions that the children are coming up for problems. That is what India needs and InnoVenture does just that",
     },
     {
-      name: "Dr. Emily Chen",
-      school: "Westlake Academy",
-      thumbnail: "/placeholder.svg?height=300&width=500",
-      quote: "IntelligentPlus challenges have become the highlight of our academic calendar.",
+      name: "Pallavi Naik",
+      school: "Principal, Kalmandi Shamrao Hogh School",
+      link: "https://www.youtube.com/embed/6CIf8t2VEUA",
+      quote:
+        "The learning that comes out of this experience is immense and we see that learning getting transferred into the Atal Tinkering projects that the children work on in the school.",
     },
     {
-      name: "Superintendent Robert Johnson",
-      school: "Oakridge School District",
-      thumbnail: "/placeholder.svg?height=300&width=500",
-      quote: "The professional development for our teachers has transformed how we approach education.",
+      name: "Promini Chopra",
+      school: "Principal, Seth MR Jaipuria",
+      link: "https://www.youtube.com/embed/RXUhIWhpoIg",
+      quote:
+        "We often ask if our children our future-ready, there have been seminars in which speakers talk about making our children future-ready, but you have done made them put it into action through InnoVenture",
     },
-  ]
-
-  const handlePlay = (index: number) => {
-    const newIsPlaying = [...isPlaying]
-    newIsPlaying[index] = true
-    setIsPlaying(newIsPlaying)
-  }
+  ];
 
   return (
     <section className="w-full py-12 md:py-24 bg-white">
@@ -59,48 +51,36 @@ export default function TestimonialsSection() {
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
-                className="relative rounded-xl overflow-hidden"
+                className="relative rounded-xl overflow-hidden shadow-lg flex flex-col"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
                 whileHover={{ y: -5 }}
               >
-                <div className="aspect-video relative">
-                  {!isPlaying[index] ? (
-                    <>
-                      <img
-                        src={testimonial.thumbnail || "/placeholder.svg"}
-                        alt={testimonial.name}
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white p-4">
-                        <Button
-                          onClick={() => handlePlay(index)}
-                          size="icon"
-                          className="h-12 w-12 rounded-full bg-violet-600 hover:bg-violet-700 text-white shadow-lg mb-4"
-                        >
-                          <Play className="h-6 w-6" />
-                          <span className="sr-only">Play video</span>
-                        </Button>
-                        <p className="text-sm font-medium">{testimonial.quote}</p>
-                      </div>
-                    </>
-                  ) : (
-                    <div className="w-full h-full">
-                      <iframe
-                        src="about:blank" // Replace with actual video embed URL
-                        title={`Testimonial from ${testimonial.name}`}
-                        className="w-full h-full"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                      ></iframe>
-                    </div>
-                  )}
+                <div className="relative aspect-video">
+                  <iframe
+                    className="absolute inset-0 w-full h-full"
+                    src={testimonial.link}
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  ></iframe>
                 </div>
-                <div className="p-4 bg-white">
-                  <h3 className="font-bold">{testimonial.name}</h3>
-                  <p className="text-sm text-gray-500">{testimonial.school}</p>
+
+                <div className="relative flex items-center justify-center p-4">
+                  <blockquote className="text-md italic text-gray-700">
+                    "{testimonial.quote} "
+                  </blockquote>
+                </div>
+                <div className="p-4 mt-auto">
+                  <h3 className="font-bold text-black dark:text-white">
+                    {testimonial.name}
+                  </h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    {testimonial.school}
+                  </p>
                 </div>
               </motion.div>
             ))}
@@ -108,6 +88,5 @@ export default function TestimonialsSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

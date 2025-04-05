@@ -32,6 +32,48 @@ export default function StakeholderSection() {
       quote:
         "This program represents the future of education - adaptive, engaging, and results-driven.",
     },
+    {
+      name: "Dr. Sarah Johnson",
+      role: "Education Board Director",
+      image: "/placeholder.svg?height=100&width=100",
+      quote:
+        "IntelligentPlus has revolutionized how we approach STEM education in our district. The results speak for themselves.",
+    },
+    {
+      name: "Michael Chen",
+      role: "School Principal",
+      image: "/placeholder.svg?height=100&width=100",
+      quote:
+        "The curriculum and challenges have engaged our students like never before. We've seen remarkable improvement in test scores.",
+    },
+    {
+      name: "Lisa Rodriguez",
+      role: "Education Policy Advisor",
+      image: "/placeholder.svg?height=100&width=100",
+      quote:
+        "This program represents the future of education - adaptive, engaging, and results-driven.",
+    },
+    {
+      name: "Dr. Sarah Johnson",
+      role: "Education Board Director",
+      image: "/placeholder.svg?height=100&width=100",
+      quote:
+        "IntelligentPlus has revolutionized how we approach STEM education in our district. The results speak for themselves.",
+    },
+    {
+      name: "Michael Chen",
+      role: "School Principal",
+      image: "/placeholder.svg?height=100&width=100",
+      quote:
+        "The curriculum and challenges have engaged our students like never before. We've seen remarkable improvement in test scores.",
+    },
+    {
+      name: "Lisa Rodriguez",
+      role: "Education Policy Advisor",
+      image: "/placeholder.svg?height=100&width=100",
+      quote:
+        "This program represents the future of education - adaptive, engaging, and results-driven.",
+    },
   ];
 
   return (
@@ -52,18 +94,23 @@ export default function StakeholderSection() {
           </p>
         </motion.div>
 
-        <Carousel className="max-w-4xl mx-auto">
+        <Carousel
+          className="mx-auto"
+          opts={{
+            loop: true,
+          }}
+        >
           <CarouselContent>
             {stakeholders.map((stakeholder, index) => (
-              <CarouselItem key={index} className="p-4">
+              <CarouselItem key={index} className="p-4 basis-1/3">
                 <motion.div
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
-                  className="max-w-4xl mx-auto bg-violet-50 rounded-xl p-8 md:p-12"
+                  className="max-w-4xl mx-auto bg-violet-50 rounded-xl p-8 md:p-12 h-max"
                 >
-                  <div className="flex flex-col md:flex-row items-center gap-8">
+                  <div className="flex flex-col items-center gap-8">
                     <div className="flex-shrink-0">
                       <Avatar className="h-24 w-24 border-4 border-white shadow-lg">
                         <AvatarImage
