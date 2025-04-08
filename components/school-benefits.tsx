@@ -1,35 +1,58 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Award, BarChart, BookOpen, Lightbulb } from "lucide-react";
+import {
+  Award,
+  BarChart,
+  BarChart3,
+  BookOpen,
+  Brain,
+  FileText,
+  Lightbulb,
+  Medal,
+  Star,
+  Trophy,
+} from "lucide-react";
 import { Button } from "./ui/button";
 import Link from "next/link";
 
 export default function SchoolBenefits() {
   const benefits = [
     {
-      icon: <BarChart className="h-10 w-10 text-orange-500" />,
-      title: "Improved Test Scores",
+      icon: <FileText className="h-10 w-10 text-blue-500" />,
+      title: "Free Innovation Program",
       description:
-        "Schools using our program see an average 23% increase in standardized test results",
+        "Research-backed, self-paced & age-appropriate program for grades 1st to 9th that builds real-world innovation skills.",
     },
     {
-      icon: <Award className="h-10 w-10 text-orange-500" />,
-      title: "Recognition & Awards",
+      icon: <Brain className="h-10 w-10 text-violet-500" />,
+      title: "Powered by Agentic-AI",
       description:
-        "Partner schools receive national recognition for educational excellence",
+        "Built on India’s first Agentic-AI platform, delivering personalized, cutting-edge learning that fosters real-world problem-solving.",
     },
     {
-      icon: <BookOpen className="h-10 w-10 text-orange-500" />,
-      title: "Curriculum Integration",
+      icon: <BarChart3 className="h-10 w-10 text-orange-500" />,
+      title: "Whole-School Innovation Report",
       description:
-        "Seamlessly integrates with existing school curriculum and teaching methods",
+        "Get clarity on your students' innovation skills and focus areas through comprehensive performance reporting.",
     },
     {
-      icon: <Lightbulb className="h-10 w-10 text-orange-500" />,
-      title: "Teacher Development",
+      icon: <Medal className="h-10 w-10 text-yellow-500" />,
+      title: "National School Innovation Awards",
       description:
-        "Professional development resources for educators to enhance teaching skills",
+        "Participate in nationwide ranking and awards, featured in EducationWorld Magazine.",
+    },
+    {
+      icon: <Trophy className="h-10 w-10 text-red-500" />,
+      title: "Finale at IIT Hyderabad",
+      description:
+        "Top students represent their schools at one of India’s most prestigious academic stages via the Innoventure Challenge.",
+    },
+    {
+      icon: <Star className="h-10 w-10 text-green-500" />,
+      title: "Leadership Recognition",
+      description:
+        "School leaders are awarded and recognized for championing innovation in education.",
     },
   ];
 
@@ -83,41 +106,7 @@ export default function SchoolBenefits() {
           </Button>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl place-items-center">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            whileHover={{ y: -10, transition: { duration: 0.2 } }}
-            className="relative row-span-3"
-          >
-            <div className="bg-white rounded-3xl p-6 h-full shadow-xl">
-              <div className="flex flex-col items-center text-center">
-                <div className="mb-4">
-                  <BarChart className="h-10 w-10 text-orange-500" />{" "}
-                </div>
-                <h3 className="text-xl font-bold mb-2">Improved Test Scores</h3>
-                <p className="text-gray-600">
-                  Schools using our program see an average 23% increase in
-                  standardized test results
-                </p>
-              </div>
-            </div>
-
-            {/* Decorative elements */}
-            <motion.div
-              className="absolute -z-10 -bottom-4 left-1/2 transform -translate-x-1/2 w-3/4 h-2 bg-blue-300 rounded-full opacity-70"
-              animate={{
-                width: ["70%", "90%", "70%"],
-                opacity: [0.5, 0.8, 0.5],
-              }}
-              transition={{
-                duration: 3,
-                repeat: Number.POSITIVE_INFINITY,
-                ease: "easeInOut",
-              }}
-            />
-          </motion.div>
+        <div className="grid grid-cols-1  md:grid-cols-3 gap-6 max-w-5xl place-items-center">
           {benefits.map((benefit, index) => (
             <motion.div
               key={index}

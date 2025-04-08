@@ -1,52 +1,46 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  Brain,
-  Medal,
-  Clock,
-  FileText,
-  PuzzleIcon as PuzzlePiece,
-  BarChart3,
-} from "lucide-react";
+
+import { Award, BarChart, BookOpen, Lightbulb } from "lucide-react";
 
 export default function StudentBenefits() {
   const benefits = [
     {
-      icon: <FileText className="h-10 w-10 text-blue-500" />,
-      title: "Relevant Content",
+      icon: <BarChart className="h-10 w-10 text-orange-500" />,
+      title: "Free Access to the Innoventure Innovation Course",
       description:
-        "Creativity. Attention. Problem Solving. We target the skills that are most important for your child's growth.",
+        "Learn age-appropriate innovation skills through  mini-episodes using the case study method pioneered at Harvard",
     },
     {
-      icon: <PuzzlePiece className="h-10 w-10 text-red-500" />,
-      title: "Gamified Format",
+      icon: <Award className="h-10 w-10 text-orange-500" />,
+      title: "Powered by India’s 1st Agentic-AI Innovation Framework",
       description:
-        "Badges, Avatars, Rewards and Challenges makes it feel like a game and keeps your child engaged.",
+        "Learn in a faster, fun and engaging way — with feedback that helps you grow",
     },
     {
-      icon: <BarChart3 className="h-10 w-10 text-orange-500" />,
-      title: "In Depth Progress Report",
+      icon: <BookOpen className="h-10 w-10 text-orange-500" />,
+      title: "Master Real-World Innovation Skills",
       description:
-        "Easily track your child's strengths and weaknesses with our rich reporting modules.",
+        "Ideation, design thinking, problem-solving, storytelling, pitching, and more.",
     },
     {
-      icon: <Brain className="h-10 w-10 text-violet-500" />,
-      title: "Personalized Learning",
+      icon: <Lightbulb className="h-10 w-10 text-orange-500" />,
+      title: "Compete in the National Innovation Challenge (Round 1 — Free)",
       description:
-        "Children Practice at their Own Pace. The worksheet difficulty adjusts to their abilities as they learn.",
+        "Showcase your skills and advance toward the National Finale.",
     },
     {
-      icon: <Clock className="h-10 w-10 text-green-500" />,
-      title: "Productive Screen Time",
+      icon: <Lightbulb className="h-10 w-10 text-orange-500" />,
+      title: "National Finale at IIT Hyderabad",
       description:
-        "Engage your child in productive and educational activity over watching meaningless videos and online games.",
+        "Present your ideas at one of India’s top institutions and earn a certificate from IIT Hyderabad.",
     },
+
     {
-      icon: <Medal className="h-10 w-10 text-yellow-500" />,
-      title: "Recognition & Awards",
-      description:
-        "Earn certificates and awards recognized by top universities and employers.",
+      icon: <Lightbulb className="h-10 w-10 text-orange-500" />,
+      title: "Certificates featuring Leading Companies",
+      description: "Build your profile with Course completion certificates",
     },
   ];
 
