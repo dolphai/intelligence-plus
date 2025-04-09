@@ -87,10 +87,10 @@ export default function StakeholderSection() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Stakeholder Applaud
+            Trusted Voices. Transformative Vision
           </h2>
           <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Hear from education leaders who have implemented our programs
+            Championed by Leaders, Driven by Purpose
           </p>
         </motion.div>
 
@@ -102,7 +102,10 @@ export default function StakeholderSection() {
         >
           <CarouselContent>
             {stakeholders.map((stakeholder, index) => (
-              <CarouselItem key={index} className="p-4 basis-1/3">
+              <CarouselItem
+                key={index}
+                className="p-4 md:basis-1/2 lg:basis-1/3"
+              >
                 <motion.div
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
@@ -139,8 +142,10 @@ export default function StakeholderSection() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          <div className="flex w-full items-center justify-center gap-5 mt-10">
+            <CarouselPrevious className="static lg:absolute" />
+            <CarouselNext className="static lg:absolute" />
+          </div>
         </Carousel>
       </div>
     </section>

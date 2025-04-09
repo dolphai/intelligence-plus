@@ -1,10 +1,8 @@
 "use client";
 
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { Button } from "./ui/button";
-import Link from "next/link";
 
 export default function GallerySection() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -27,10 +25,11 @@ export default function GallerySection() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            School Partners
+            The Best Schools of the country join in the Vision and the Value!
           </h2>
           <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Our School partners who entrusted us with their students
+            Collectively Leveling -Up the Schools and Empowering Students with
+            "Innovation Education"
           </p>
         </motion.div>
 

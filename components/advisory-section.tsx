@@ -1,31 +1,30 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Award, BookOpen, GraduationCap, Users } from "lucide-react"
+import { motion } from "framer-motion";
+import { Award, BookOpen, GraduationCap, Users } from "lucide-react";
 
 export default function AdvisorySection() {
   const guidelines = [
     {
-      icon: <BookOpen className="h-6 w-6" />,
-      title: "Curriculum Standards",
-      description: "All courses aligned with national education standards",
+      className: "",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/b/bd/Ministry_of_Education_India.svg",
     },
     {
-      icon: <GraduationCap className="h-6 w-6" />,
-      title: "Expert Educators",
-      description: "Content developed by leading education professionals",
+      logo: "https://nisp.mic.gov.in/assets/img/MoE-Logo.png",
     },
     {
-      icon: <Award className="h-6 w-6" />,
-      title: "Challenge Guidelines",
-      description: "Fair and inclusive competition rules for all participants",
+      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb_OJQ7SD7LfUt1nZQGfi1oEhzdr39TAL3Sw&s",
     },
     {
-      icon: <Users className="h-6 w-6" />,
-      title: "Community Support",
-      description: "Ongoing assistance for schools and students",
+      logo: "https://nmbhssbpr.wordpress.com/wp-content/uploads/2023/04/niti-aayog-aim.png",
     },
-  ]
+    {
+      logo: "https://www.plt.org/wp-content/uploads/2020/01/DG-logo-with-UN-Emblem_Square_Web_transparent.png",
+    },
+    {
+      logo: "https://i.pinimg.com/736x/68/99/ff/6899ff91faecd2acccbf4e87020bd8ba.jpg",
+    },
+  ];
 
   return (
     <section className="w-full py-12 md:py-24 bg-gray-50">
@@ -37,31 +36,29 @@ export default function AdvisorySection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Advisory Guidelines</h2>
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            Advisory Guidelines
+          </h2>
           <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Our educational framework is built on these core principles
+            Aligned to the Guidelines of
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+        <div className="max-w-3xl mx-auto grid grid-cols-3 place-items-center">
           {guidelines.map((item, index) => (
             <motion.div
               key={index}
-              className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-sm border border-gray-100"
+              className=" p-6 "
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)" }}
             >
-              <div className="p-3 rounded-full bg-violet-100 text-violet-600 mb-4">{item.icon}</div>
-              <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-              <p className="text-gray-500">{item.description}</p>
+              <img src={item.logo}></img>
             </motion.div>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }
-

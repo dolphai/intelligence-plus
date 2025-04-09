@@ -58,7 +58,7 @@ export default function HeroSection() {
               transition={{ delay: 0.6, duration: 0.5 }}
             >
               <Button size="lg" className="bg-violet-600 hover:bg-violet-700">
-                Onboard your School
+                Onboard Your School — No Cost
               </Button>
             </motion.div>
           </div>

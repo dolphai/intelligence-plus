@@ -102,7 +102,7 @@ export default function SchoolBenefits() {
               href="https://docs.google.com/forms/d/e/1FAIpQLSfBSD35zx1tlJ9H-FCfv2N1VsaEaKuMi8FfOH7cAmQSiGRV0w/viewform"
               target="_blank"
             ></Link>
-            Claim Your Benefits
+            Bring Innovation to your School
           </Button>
         </motion.div>
 
