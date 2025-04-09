@@ -1,9 +1,23 @@
 "use client";
 
 import { motion } from "framer-motion";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "./ui/dialog";
+import { MouseEvent, useState } from "react";
+
+type TimelineEvent = {
+  date: string;
+  title: string;
+  description: string;
+};
 
 export default function TimelineSection() {
-  const timelineEvents = [
+  const timelineEvents: TimelineEvent[] = [
     {
       date: "January 15, 2024",
       title: "Registration Opens",
@@ -28,6 +42,15 @@ export default function TimelineSection() {
         "Championship event with awards ceremony and industry recognition",
     },
   ];
+  const [selectedEvent, setSelectedEvent] = useState<TimelineEvent | null>(
+    null,
+  );
+
+  const handleClick = (event: (typeof timelineEvents)[0]) => {
+    setSelectedEvent(event);
+  };
+
+  const closeDialog = () => setSelectedEvent(null);
 
   return (
     <section className="w-full py-12 md:py-24 bg-gray-50">
@@ -54,8 +77,10 @@ export default function TimelineSection() {
             {timelineEvents.map((event, index) => (
               <div
                 key={index}
-                className="relative md:w-1/4 w-full flex flex-col items-center md:items-center mb-10 md:mb-0"
+                onClick={() => handleClick(event)}
+                className="relative cursor-pointer md:w-1/4 w-full flex flex-col items-center md:items-center mb-10 md:mb-0"
               >
+                {/* Desktop card */}
                 <div
                   className={`hidden md:block mb-6 md:mb-0 md:absolute md:w-64 ${
                     index % 2 === 0
@@ -87,6 +112,26 @@ export default function TimelineSection() {
                 </div>
               </div>
             ))}
+
+            {/* Dialog for event details */}
+            <Dialog open={!!selectedEvent} onOpenChange={closeDialog}>
+              <DialogContent>
+                {selectedEvent && (
+                  <>
+                    <DialogHeader>
+                      <DialogTitle>{selectedEvent.title}</DialogTitle>
+                      <DialogDescription>
+                        {selectedEvent.date}
+                      </DialogDescription>
+                    </DialogHeader>
+                    <div className="mt-2 text-sm">
+                      <p>{selectedEvent.description}</p>
+                      {/* You can add more details here like speakers, images, links, etc. */}
+                    </div>
+                  </>
+                )}
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
       </div>
