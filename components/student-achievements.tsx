@@ -63,13 +63,13 @@ export default function StudentAchievements() {
         >
           <CarouselContent>
             {achievements.map((achievement, index) => (
-              <CarouselItem key={index} className="p-4 basis-2/3">
+              <CarouselItem key={index} className="p-4 w-full sm:basis-2/3">
                 <motion.div
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1, duration: 0.5 }}
-                  className="relative shadow-lg rounded-3xl flex items-center justify-between basis-1/2"
+                  className="relative shadow-lg rounded-3xl flex items-center flex-col md:flex-row justify-between basis-1/2"
                 >
                   <div className="md:col-span-7 p-6 md:p-10 flex flex-col justify-center">
                     <h3 className="text-2xl md:text-3xl font-bold mb-2">
@@ -89,8 +89,10 @@ export default function StudentAchievements() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          <div className="flex w-full items-center justify-center gap-5 mt-10">
+            <CarouselPrevious className="static lg:absolute" />
+            <CarouselNext className="static lg:absolute" />
+          </div>
         </Carousel>
 
         <motion.div
