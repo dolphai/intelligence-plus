@@ -45,7 +45,10 @@ export default function StudentBenefits() {
   ];
 
   return (
-    <section className="w-full py-12 md:py-24 bg-gradient-to-b from-indigo-950 to-violet-900 relative overflow-hidden">
+    <section
+      id="student-benefits"
+      className="w-full py-12 md:py-24 bg-gradient-to-b from-indigo-950 to-violet-900 relative overflow-hidden"
+    >
       {/* Stars background */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(50)].map((_, i) => (

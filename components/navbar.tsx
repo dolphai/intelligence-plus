@@ -6,6 +6,25 @@ import Link from "next/link";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const navLinks = [
+    {
+      label: "Schools",
+      link: "#school-benefits",
+    },
+    {
+      label: "Students",
+      link: "#student-benefits",
+    },
+    {
+      label: "Testimonials",
+      link: "#testimonials",
+    },
+    {
+      label: "Timeline",
+      link: "#timeline",
+    },
+  ];
+
   return (
     <nav className="bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,12 +36,15 @@ export default function Navbar() {
 
           {/* Desktop Nav Links */}
           <div className="hidden md:flex space-x-6">
-            <a href="#" className="text-gray-700 hover:text-violet-600">
-              AboutUs
-            </a>
-            <a href="#" className="text-gray-700 hover:text-violet-600">
-              Contact
-            </a>
+            {navLinks.map(({ link, label }, index) => (
+              <a
+                href={link}
+                key={`navbar-item-${index}`}
+                className="text-gray-700 hover:text-violet-600"
+              >
+                {label}
+              </a>
+            ))}
           </div>
 
           {/* Login / Signup */}
@@ -32,7 +54,7 @@ export default function Navbar() {
                 href="https://docs.google.com/forms/d/e/1FAIpQLSfBSD35zx1tlJ9H-FCfv2N1VsaEaKuMi8FfOH7cAmQSiGRV0w/viewform"
                 target="_blank"
               >
-                Register a School
+                Register your School
               </Link>
             </button>
           </div>
@@ -50,36 +72,23 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white shadow-md">
-          <a
-            href="#"
-            className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-          >
-            Home
-          </a>
-          <a
-            href="#"
-            className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-          >
-            Features
-          </a>
-          <a
-            href="#"
-            className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-          >
-            Pricing
-          </a>
-          <a
-            href="#"
-            className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-          >
-            Contact
-          </a>
+          {navLinks.map(({ label, link }, index) => (
+            <a
+              key={`navbar-item-${index}`}
+              href={link}
+              className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+            >
+              {label}
+            </a>
+          ))}
           <div className="px-4 py-2 flex flex-col space-y-2">
-            <button className="w-full px-4 py-2 text-violet-600 border border-violet-600 rounded-lg hover:bg-violet-600 hover:text-white">
-              Login
-            </button>
-            <button className="w-full px-4 py-2 bg-violet-600 text-white rounded-lg hover:bg-violet-700">
-              Sign Up
+            <button className="px-4 py-2 text-violet-600 border border-violet-600 rounded-lg hover:bg-violet-600 hover:text-white">
+              <Link
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfBSD35zx1tlJ9H-FCfv2N1VsaEaKuMi8FfOH7cAmQSiGRV0w/viewform"
+                target="_blank"
+              >
+                Register your School
+              </Link>
             </button>
           </div>
         </div>

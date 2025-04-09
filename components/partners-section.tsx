@@ -39,7 +39,7 @@ export default function PartnersSection() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 items-center">
+        <div className="grid grid-cols-3 gap-8 items-center">
           {partners.map((partner, index) => (
             <motion.div
               key={index}
@@ -55,9 +55,9 @@ export default function PartnersSection() {
                 alt={partner.name}
                 className="max-h-12 w-auto hover:grayscale-0 transition-all duration-300"
               />
-              <div className="text-center">
+              <div className="text-center text-md">
                 <p className="font-bold">{partner.name}</p>
-                <p className="text-sm opacity-50">{partner.type}</p>
+                <p className="text-sm opacity-50 text-sm">{partner.type}</p>
               </div>
             </motion.div>
           ))}

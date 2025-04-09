@@ -53,7 +53,7 @@ export default function TimelineSection() {
   const closeDialog = () => setSelectedEvent(null);
 
   return (
-    <section className="w-full py-12 md:py-24 bg-gray-50">
+    <section id="timeline" className="w-full py-12 md:py-24 bg-gray-50">
       <div className="container px-4 md:px-6">
         <motion.div
           className="flex flex-col items-center text-center space-y-4 mb-12"
