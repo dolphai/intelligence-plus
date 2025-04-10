@@ -9,7 +9,7 @@ export default function GallerySection() {
 
   const images = [
     {
-      src: "https://www.logiqids.com/images/schools.png",
+      src: "/school-logos.jpeg",
       alt: "Students collaborating on a project",
     },
   ];
@@ -27,13 +27,13 @@ export default function GallerySection() {
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             The Best Schools of the country join in the Vision and the Value!
           </h2>
-          <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+          <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
             Collectively Leveling -Up the Schools and Empowering Students with
             "Innovation Education"
           </p>
         </motion.div>
 
-        <div className="flex items-center justify-center w-full gap-4">
+        <div className="flex items-center justify-center w-2/3 mx-auto gap-4">
           {images.map((image, index) => (
             <motion.div
               key={index}
@@ -48,7 +48,7 @@ export default function GallerySection() {
               <img
                 src={image.src || "/placeholder.svg"}
                 alt={image.alt}
-                className="w-screen h-64 object-cover transition-transform duration-500 hover:scale-110"
+                className="w-full object-cover transition-transform duration-500 hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
                 <p className="text-white p-4 text-sm">{image.alt}</p>

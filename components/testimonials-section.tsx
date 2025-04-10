@@ -13,35 +13,26 @@ import Image from "next/image";
 export default function TestimonialsSection() {
   const testimonials = [
     {
-      name: "Padma Shree Dr. S.B. Mujumdar",
-      school: "Symbiosis International University",
-      desg: "Founder & President",
-      link: "/placeholder.svg",
+      name: "Radha Baruah",
+      school: "Principal Sanskriti the Gurukul, Assam",
+      link: "https://www.youtube.com/embed/Y8xg18-FwYo",
+
       quote:
-        "While schools prepare children for academic course work, it is equally important that children be equipped with Future Ready Skills. Innoventure helps children develop creativity  & think innovatively & discover things outside the school that are valuable in the real world. Its a comendable vision and mission",
+        "Children gain exposure to expertise, that is beyond what the school could provide. It’s so interesting to see the kind of solutions that the children are coming up for problems. That is what India needs and InnoVenture does just that",
     },
     {
-      name: "Padma Vibhushan Dr. Raghunath Mashelkar",
-      school: "",
-      link: "/placeholder.svg",
+      name: "Pallavi Naik",
+      school: "Principal, Kalmandi Shamrao Hogh School",
+      link: "https://www.youtube.com/embed/6CIf8t2VEUA",
       quote:
-        "Innoventure is a fantastic idea and platform. They are promoting very critical skills like Ideation, Innovation and Critical Thinking skills for children that lay a great foundation for young India. In their impressive decade long journey, they have already impacted thousands of children and  NEP 2020 has clearly says education  must move towards less content and more towards order thinking skills and innovation skills and that is exacty what IntelligencePlus and Innoventure is doing.",
+        "The learning that comes out of this experience is immense and we see that learning getting transferred into the Atal Tinkering projects that the children work on in the school.",
     },
     {
-      name: "Gurubans Chatwal",
-      school: "Innovation & Intelligent Automation, Fiserv",
-      desg: "Vice President",
-      link: "/placeholder.svg",
+      name: "Promini Chopra",
+      school: "Principal, Seth MR Jaipuria",
+      link: "https://www.youtube.com/embed/RXUhIWhpoIg",
       quote:
-        "I am so awestruck that you have taken an abstract concept like innovation and translated it into a program and platform for children as young as 6yrs. I am so so delighted to see the ideas and detailing children have done. Stunning experience to see a platform that allows and nurtures the innovation spark in children that are otherwise not done. Absolutely amazing program.",
-    },
-    {
-      name: "Sushil Borde",
-      school: "Reliance Innovation Leadership Center",
-      desg: "Head",
-      link: "/placeholder.svg",
-      quote:
-        "The potential students have is massive and it is the need of times that children and school nurture Innovation  mindset and skillset. This is kind of learning young India needs to be competent and create solutions for real life. It's an amazing initiative and I have witnessed first-hand the impact it is creating in children's life. The projects and ideas emerging are top-notch and it reflects how student's are being empowered throught the platform to think and innovate like this",
+        "We often ask if our children our future-ready, there have been seminars in which speakers talk about making our children future-ready, but you have done made them put it into action through InnoVenture",
     },
   ];
 
@@ -70,24 +61,27 @@ export default function TestimonialsSection() {
               {testimonials.map((testimonial, index) => (
                 <CarouselItem
                   key={index}
-                  className="w-full sm:basis-1/2 lg:basis-1/3 h-[700px]"
+                  className="w-full sm:basis-1/2 lg:basis-1/3 py-5"
                 >
                   <motion.div
-                    className="min-h-[600px] mx-auto rounded-xl overflow-hidden shadow-lg flex flex-col"
+                    className="mx-auto rounded-xl overflow-hidden shadow-lg flex flex-col"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1, duration: 0.5 }}
                   >
-                    <div className="relative aspect-video">
-                      <Image
+                    <div className="relative aspect-[14/9]">
+                      <iframe
+                        className="absolute inset-0 w-full h-full"
                         src={testimonial.link}
-                        alt={testimonial.name}
-                        fill
-                      />
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                      ></iframe>
                     </div>
 
-                    <div className="relative flex items-center justify-center p-4">
+                    <div className="relative flex items-center justify-center p-4 min-h-[180px]">
                       <blockquote className="text-md italic text-gray-700">
                         "{testimonial.quote}"
                       </blockquote>
@@ -105,7 +99,7 @@ export default function TestimonialsSection() {
               ))}
             </CarouselContent>
 
-            <div className="flex w-full items-center justify-center gap-5">
+            <div className="flex w-full items-center justify-center gap-5 mt-5">
               <CarouselPrevious className="static lg:absolute" />
               <CarouselNext className="static lg:absolute" />
             </div>

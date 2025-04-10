@@ -98,14 +98,16 @@ export default function SchoolBenefits() {
             School Benefits
           </h2>
           <p className="max-w-[700px] text-gray-200 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Partner with IntelligentPlus and transform your educational outcomes
+            Partner with Intelligence Plus and transform your educational
+            outcomes
           </p>
-          <Button className="bg-orange-600 hover:bg-violet-700 ">
+          <Button className="bg-orange-600 hover:bg-violet-700">
             <Link
               href="https://docs.google.com/forms/d/e/1FAIpQLSfBSD35zx1tlJ9H-FCfv2N1VsaEaKuMi8FfOH7cAmQSiGRV0w/viewform"
               target="_blank"
-            ></Link>
-            Bring Innovation to your School
+            >
+              Bring Innovation to your School
+            </Link>
           </Button>
         </motion.div>
 

@@ -5,19 +5,13 @@ import { motion } from "framer-motion";
 export default function PartnersSection() {
   const partners = [
     {
-      name: "Mapro",
       logo: "https://www.mapro.com/cdn/shop/files/Group_139560_2x_de61683a-e433-4113-85a8-314587f529a6.jpg?height=628&pad_color=fff&v=1660288307&width=1200",
-      type: "Education Partner",
     },
     {
-      name: "TATA",
       logo: "https://companieslogo.com/img/orig/TATAMOTORS.NS-1c3e3e90.png?t=1720244494",
-      type: "Education Partner",
     },
     {
-      name: "OYO",
       logo: "https://upload.wikimedia.org/wikipedia/commons/2/23/OYO_Rooms_logo.png",
-      type: "Education Partner",
     },
   ];
 

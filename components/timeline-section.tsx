@@ -41,6 +41,18 @@ export default function TimelineSection() {
       description:
         "Championship event with awards ceremony and industry recognition",
     },
+    {
+      date: "June 30, 2024",
+      title: "National Finals",
+      description:
+        "Championship event with awards ceremony and industry recognition",
+    },
+    {
+      date: "June 30, 2024",
+      title: "National Finals",
+      description:
+        "Championship event with awards ceremony and industry recognition",
+    },
   ];
   const [selectedEvent, setSelectedEvent] = useState<TimelineEvent | null>(
     null,
@@ -66,7 +78,7 @@ export default function TimelineSection() {
             Timeline & Round Details
           </h2>
           <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Key dates for the upcoming IntelligentPlus National Challenge
+            Key dates for the upcoming Intelligence Plus National Challenge
           </p>
         </motion.div>
 

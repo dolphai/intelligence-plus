@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -46,7 +47,7 @@ export default function HeroSection() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.7 }}
             >
-              IntelligentPlus provides cutting-edge educational courses and
+              Intelligence Plus provides cutting-edge educational courses and
               challenges that prepare students for the future while helping
               schools excel in STEM education.
             </motion.p>
@@ -58,7 +59,12 @@ export default function HeroSection() {
               transition={{ delay: 0.6, duration: 0.5 }}
             >
               <Button size="lg" className="bg-violet-600 hover:bg-violet-700">
-                Onboard Your School — No Cost
+                <Link
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfBSD35zx1tlJ9H-FCfv2N1VsaEaKuMi8FfOH7cAmQSiGRV0w/viewform"
+                  target="_blank"
+                >
+                  Onboard Your School — No Cost
+                </Link>
               </Button>
             </motion.div>
           </div>

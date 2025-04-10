@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { motion } from "framer-motion"
-import { Play } from "lucide-react"
-import { useState } from "react"
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import { Play } from "lucide-react";
+import { useState } from "react";
 
 export default function VideoSection() {
-  const [isPlaying, setIsPlaying] = useState(false)
+  const [isPlaying, setIsPlaying] = useState(false);
 
   return (
     <section className="w-full py-12 md:py-24 bg-white">
@@ -18,9 +18,12 @@ export default function VideoSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Our Vision</h2>
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            Our Vision
+          </h2>
           <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            See how IntelligentPlus is transforming education through innovative courses and challenges
+            See how Intelligence Plus is transforming education through
+            innovative courses and challenges
           </p>
         </motion.div>
 
@@ -36,7 +39,7 @@ export default function VideoSection() {
               <>
                 <img
                   src="/placeholder.svg?height=720&width=1280"
-                  alt="IntelligentPlus Vision"
+                  alt="Intelligence Plus Vision"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/20">
@@ -54,7 +57,7 @@ export default function VideoSection() {
               <div className="w-full h-full">
                 <iframe
                   src="about:blank" // Replace with actual video embed URL
-                  title="IntelligentPlus Vision Video"
+                  title="Intelligence Plus Vision Video"
                   className="w-full h-full"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
@@ -65,6 +68,5 @@ export default function VideoSection() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
-

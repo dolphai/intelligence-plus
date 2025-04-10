@@ -24,7 +24,7 @@ export default function Footer() {
             transition={{ duration: 0.5 }}
           >
             <h3 className="text-xl font-bold text-white mb-4">
-              IntelligentPlus
+              Intelligence Plus
             </h3>
             <p className="mb-4">
               We are building the Future Human Capital Of India through 21st
@@ -140,7 +140,7 @@ export default function Footer() {
           transition={{ delay: 0.4, duration: 0.5 }}
         >
           <p>
-            &copy; {new Date().getFullYear()} IntelligentPlus. All rights
+            &copy; {new Date().getFullYear()} Intelligence Plus. All rights
             reserved.
           </p>
         </motion.div>

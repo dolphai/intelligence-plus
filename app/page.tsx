@@ -15,7 +15,7 @@ import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 
 export const metadata: Metadata = {
-  title: "IntelligentPlus | Educational Courses & Challenges",
+  title: "Intelligence Plus | Educational Courses & Challenges",
   description:
     "Empowering students and schools through innovative educational courses and nationwide challenges.",
 };

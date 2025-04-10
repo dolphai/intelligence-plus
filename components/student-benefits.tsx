@@ -86,7 +86,7 @@ export default function StudentBenefits() {
             Student Benefits
           </h2>
           <p className="max-w-[700px] text-gray-200 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            How IntelligentPlus helps students excel academically and beyond
+            How Intelligence Plus helps students excel academically and beyond
           </p>
         </motion.div>
 
