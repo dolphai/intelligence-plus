@@ -12,10 +12,10 @@ export default function StakeholderSection() {
   const stakeholders = [
     {
       name: "Dr. Abhay Jere",
-      desg: "Chief Innovation Officer, Ministry of HRD, Govt. of India",
+      desg: "Vice Chairman, AICTE & Chief Innovation Officer, Ministry of Education, Govt. of India",
       image: "/placeholder.svg",
       quote:
-        "Children getting exposure to business models, design thinking frameworks and creating value propositions is something remarkable at such a young age. What I have witnessed is worthy taking to every desg of India.",
+        "Children getting exposure to business models, design thinking frameworks and creating value propositions is something remarkable at such a young age. What I have witnessed is worthy taking to every school of India.",
     },
     {
       name: "Air Marshal Bhushan Gokhale",
@@ -26,7 +26,7 @@ export default function StakeholderSection() {
     },
     {
       name: "Dr. Ganesh Natrajan",
-      desg: "Chairman 5F World, GTT; Board Member, SBI",
+      desg: "Chairman of 5F World, GTT Data Solutions, Lighthouse Communities, EPPS & Honeywell Automation India Ltd.",
       image: "/placeholder.svg",
       quote:
         "Innoventure is one such platform where quality of the students and the tools that they are being introduced to is outstanding. This will inspire a better society. A very good format and very well organized event.",
@@ -39,8 +39,8 @@ export default function StakeholderSection() {
         "Innoventure is a brilliant platform that nurtures essential skills like ideation, innovation, and critical thinking in children—skills vital for building a strong foundation for young India. With over a decade of impact, it aligns perfectly with NEP 2020’s vision of moving from content-heavy learning to higher-order thinking and innovation.",
     },
     {
-      name: "Gurubans Chatwal",
-      desg: "Innovation & Intelligent Automation, Fiserv",
+      name: "Gurbans Chatwal",
+      desg: "Vice President of Innovation & Intelligent Automation ,  Fiserv",
       role: "Vice President",
       image: "/placeholder.svg",
       quote:
@@ -48,7 +48,7 @@ export default function StakeholderSection() {
     },
     {
       name: "Sushil Borde",
-      desg: "Reliance Innovation Leadership Center",
+      desg: "Head of Reliance Innovation Leadership Centre",
       role: "Head",
       image: "/placeholder.svg",
       quote:
@@ -97,6 +97,7 @@ export default function StakeholderSection() {
                     <img
                       src={stakeholder.image}
                       className="h-full max-h-[250px] w-full object-cover" // Consider object-cover
+                      alt="Image"
                     />
                   </div>
                   <div className="flex-1 text-center md:text-left p-8 flex flex-col justify-between">

@@ -22,37 +22,37 @@ export default function SchoolBenefits() {
       icon: <FileText className="h-10 w-10 text-blue-500" />,
       title: "Free Innovation Program",
       description:
-        "Research-backed, self-paced & age-appropriate program for grades 1st to 9th that builds real-world innovation skills.",
+        "Research backed, self-paced & age appropriate Innovation Skills Program for grades 1st to 9th.",
     },
     {
       icon: <Brain className="h-10 w-10 text-violet-500" />,
-      title: "Powered by Agentic-AI",
+      title: "Built on India’s First Agentic-AI Platform",
       description:
-        "Built on India’s first Agentic-AI platform, delivering personalized, cutting-edge learning that fosters real-world problem-solving.",
+        "Personalized, cutting-edge content  that fosters real-world problem-solving and feedback.",
     },
     {
       icon: <BarChart3 className="h-10 w-10 text-orange-500" />,
-      title: "Whole-School Innovation Report",
+      title: "School Innovation Performance Report",
       description:
-        "Get clarity on your students' innovation skills and focus areas through comprehensive performance reporting.",
+        "Lead with clarity on student Innovation skills and focus areas.",
     },
     {
       icon: <Medal className="h-10 w-10 text-yellow-500" />,
       title: "National School Innovation Awards",
       description:
-        "Participate in nationwide ranking and awards, featured in EducationWorld Magazine.",
+        "Prestigious Awards for schools based on performance data . Also published in  EW Magazine ",
     },
     {
       icon: <Trophy className="h-10 w-10 text-red-500" />,
-      title: "Finale at IIT Hyderabad",
+      title: "MOE -Aligned Initiative",
       description:
-        "Top students represent their schools at one of India’s most prestigious academic stages via the Innoventure Challenge.",
+        "Lead with credibility and showcase implementation of NPPIS, IIE and NEP 2020 goals ",
     },
     {
       icon: <Star className="h-10 w-10 text-green-500" />,
       title: "Leadership Recognition",
       description:
-        "School leaders are awarded and recognized for championing innovation in education.",
+        "School leaders receive awards and visibility for enabling 'Innovation In Schools’. ",
     },
   ];
 
@@ -98,8 +98,7 @@ export default function SchoolBenefits() {
             School Benefits
           </h2>
           <p className="max-w-[700px] text-gray-200 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Partner with Intelligence Plus and transform your educational
-            outcomes
+            Position Your School as a National Innovation Leader
           </p>
           <Button className="bg-orange-600 hover:bg-violet-700">
             <Link
@@ -120,15 +119,11 @@ export default function SchoolBenefits() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
               whileHover={{ y: -10, transition: { duration: 0.2 } }}
-              className="relative"
+              className="relative h-full w-full bg-white rounded-3xl p-6 h-full w-full shadow-xl flex items-center justify-center flex-col text-center"
             >
-              <div className="bg-white rounded-3xl p-6 h-full shadow-xl">
-                <div className="flex flex-col items-center text-center">
-                  <div className="mb-4">{benefit.icon}</div>
-                  <h3 className="text-xl font-bold mb-2">{benefit.title}</h3>
-                  <p className="text-gray-600">{benefit.description}</p>
-                </div>
-              </div>
+              <div className="mb-4">{benefit.icon}</div>
+              <h3 className="text-xl font-bold mb-2">{benefit.title}</h3>
+              <p className="text-gray-600">{benefit.description}</p>
 
               {/* Decorative elements */}
               <motion.div

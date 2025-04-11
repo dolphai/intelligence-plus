@@ -33,7 +33,7 @@ export default function GallerySection() {
           </p>
         </motion.div>
 
-        <div className="flex items-center justify-center w-2/3 mx-auto gap-4">
+        <div className="flex items-center justify-center w-full mx-auto gap-4">
           {images.map((image, index) => (
             <motion.div
               key={index}

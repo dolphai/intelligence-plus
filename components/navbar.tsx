@@ -29,13 +29,16 @@ export default function Navbar() {
     <nav className="bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          {/* Logo */}
-          <div className="text-2xl font-bold text-violet-600">
-            Intelligence Plus
+          <div className="">
+            <img
+              src="/logo.png"
+              alt="logo"
+              className="max-w-[250px] max-h-[70px]"
+            />
           </div>
 
           {/* Desktop Nav Links */}
-          <div className="hidden md:flex space-x-6">
+          <div className="hidden md:flex space-x-6 h-full items-center">
             {navLinks.map(({ link, label }, index) => (
               <a
                 href={link}

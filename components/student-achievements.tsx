@@ -10,7 +10,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "./ui/carousel";
-import Image from "next/image";
 
 export default function StudentAchievements() {
   const achievements = [
@@ -48,10 +47,10 @@ export default function StudentAchievements() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Real Stories, Real Impact
+            Student Ideas, Innovations and Success Journeys
           </h2>
           <p className="max-w-[700px] text-gray-900 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Student Ideas, Innovations and Success Journeys
+            Real Stories, Real Impact
           </p>
         </motion.div>
 

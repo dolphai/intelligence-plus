@@ -1,21 +1,37 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Award, BookOpen, GraduationCap, Users } from "lucide-react";
+import Marquee from "react-fast-marquee";
 
 export default function AdvisorySection() {
   const guidelines = [
     {
-      logo: "https://upload.wikimedia.org/wikipedia/commons/b/bd/Ministry_of_Education_India.svg",
+      type: "logo",
+      link: "https://upload.wikimedia.org/wikipedia/commons/b/bd/Ministry_of_Education_India.svg",
     },
     {
-      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb_OJQ7SD7LfUt1nZQGfi1oEhzdr39TAL3Sw&s",
+      type: "logo",
+      link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb_OJQ7SD7LfUt1nZQGfi1oEhzdr39TAL3Sw&s",
     },
     {
-      logo: "https://nmbhssbpr.wordpress.com/wp-content/uploads/2023/04/niti-aayog-aim.png",
+      type: "logo",
+      link: "https://nmbhssbpr.wordpress.com/wp-content/uploads/2023/04/niti-aayog-aim.png",
     },
     {
-      logo: "https://i.pinimg.com/736x/68/99/ff/6899ff91faecd2acccbf4e87020bd8ba.jpg",
+      type: "logo",
+      link: "https://i.pinimg.com/736x/68/99/ff/6899ff91faecd2acccbf4e87020bd8ba.jpg",
+    },
+    {
+      type: "policy",
+      link: "National Education Policy 2020 (NEP)",
+    },
+    {
+      type: "policy",
+      link: "National Policy for Promotion of Innovation in Schools (NPPIS)",
+    },
+    {
+      type: "policy",
+      link: "Idea Innovation and Entrepreneurship Agenda (IIE)",
     },
   ];
 
@@ -32,37 +48,31 @@ export default function AdvisorySection() {
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             Advisory Guidelines
           </h2>
-          <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Aligned to the goals and guidelines of
-          </p>
         </motion.div>
 
         {/* Marquee Container */}
-        <div className="relative mx-auto w-full max-w-4xl overflow-hidden">
-          <motion.div
-            className="flex space-x-8 animate-marquee"
-            initial={{ x: "0%" }}
-            animate={{ x: "-50%" }}
-            transition={{
-              repeat: Infinity,
-              duration: 20,
-              ease: "linear",
-            }}
-          >
-            {[...guidelines, ...guidelines].map((item, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-center p-4 flex-shrink-0"
-              >
+        <Marquee className="relative mx-auto w-full max-w-4xl overflow-hidden">
+          {[...guidelines, ...guidelines].map((item, index) => (
+            <div
+              key={index}
+              className="flex items-center justify-center p-4 flex-shrink-0"
+            >
+              {item.type === "logo" && (
                 <img
-                  src={item.logo}
+                  src={item.link}
                   alt=""
                   className="h-16 w-auto object-contain"
                 />
-              </div>
-            ))}
-          </motion.div>
-        </div>
+              )}
+
+              {item.type === "policy" && (
+                <div className="font-[800] max-w-[200px] text-center p-4 rounded-md h-full align-middle bg-violet-600 text-white ">
+                  {item.link}
+                </div>
+              )}
+            </div>
+          ))}
+        </Marquee>
       </div>
     </section>
   );

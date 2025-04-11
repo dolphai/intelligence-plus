@@ -28,42 +28,19 @@ export default function VideoSection() {
         </motion.div>
 
         <motion.div
-          className="relative mx-auto max-w-4xl overflow-hidden rounded-2xl shadow-xl"
+          className="relative mx-auto max-w-7xl overflow-hidden rounded-2xl shadow-xl"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.5 }}
         >
           <div className="relative aspect-video bg-gray-100 overflow-hidden">
-            {!isPlaying ? (
-              <>
-                <img
-                  src="/placeholder.svg?height=720&width=1280"
-                  alt="Intelligence Plus Vision"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 flex items-center justify-center bg-black/20">
-                  <Button
-                    onClick={() => setIsPlaying(true)}
-                    size="icon"
-                    className="h-16 w-16 rounded-full bg-violet-600 hover:bg-violet-700 text-white shadow-lg transition-transform hover:scale-110"
-                  >
-                    <Play className="h-8 w-8" />
-                    <span className="sr-only">Play video</span>
-                  </Button>
-                </div>
-              </>
-            ) : (
-              <div className="w-full h-full">
-                <iframe
-                  src="about:blank" // Replace with actual video embed URL
-                  title="Intelligence Plus Vision Video"
-                  className="w-full h-full"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-            )}
+            <iframe
+              className="h-full w-full"
+              src="https://www.youtube.com/embed/jJOaN8oX5rs?si=m8-XYOQy4erFlgIf"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            ></iframe>
           </div>
         </motion.div>
       </div>

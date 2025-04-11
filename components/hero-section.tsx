@@ -32,13 +32,14 @@ export default function HeroSection() {
             </motion.div>
 
             <motion.h1
-              className="text-4xl md:text-6xl font-bold text-white"
+              className="text-2xl md:text-6xl font-bold text-white"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.7 }}
             >
-              Empowering the Next Generation of{" "}
-              <span className="text-violet-400">Innovators</span>
+              Nurturing the Next Generation of{" "}
+              <span className="text-violet-300">Innovators</span> & Changemakers
+              — Starting Today!
             </motion.h1>
 
             <motion.p
@@ -47,9 +48,9 @@ export default function HeroSection() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.7 }}
             >
-              Intelligence Plus provides cutting-edge educational courses and
-              challenges that prepare students for the future while helping
-              schools excel in STEM education.
+              Bring a culture of innovation to your school with a cutting-edge
+              program, compete on a national stage, and put your students and
+              school on India’s innovation map.
             </motion.p>
 
             <motion.div
@@ -63,7 +64,7 @@ export default function HeroSection() {
                   href="https://docs.google.com/forms/d/e/1FAIpQLSfBSD35zx1tlJ9H-FCfv2N1VsaEaKuMi8FfOH7cAmQSiGRV0w/viewform"
                   target="_blank"
                 >
-                  Onboard Your School — No Cost
+                  Onboard Your School for Free
                 </Link>
               </Button>
             </motion.div>

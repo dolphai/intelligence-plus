@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState } from "react";
 import {
   Dialog,
   DialogContent,
@@ -8,50 +9,60 @@ import {
   DialogHeader,
   DialogTitle,
 } from "./ui/dialog";
-import { MouseEvent, useState } from "react";
 
 type TimelineEvent = {
   date: string;
   title: string;
   description: string;
+  details?: string;
 };
 
 export default function TimelineSection() {
   const timelineEvents: TimelineEvent[] = [
     {
-      date: "January 15, 2024",
-      title: "Registration Opens",
+      date: "Deadline: May 2025",
+      title: "Free School Registration",
       description:
-        "Schools and individual students can register for the upcoming challenges",
+        " Schools can register online by sharing basic details and coordinator info.",
+      details: "get login access and support materials by end of may.",
     },
     {
-      date: "March 1, 2024",
-      title: "Regional Qualifiers",
-      description: "First round of challenges begins across regional centers",
+      date: "Opens June 2025",
+      title: "Free Student Registration",
+      description:
+        "Once schools are registered, students can sign up online to begin their innovation journey through their individual logins. ",
     },
     {
-      date: "May 15, 2024",
-      title: "National Semi-Finals",
+      date: "June - August 2025",
+      title: "Free Innovation Course",
       description:
-        "Top performers from regional qualifiers compete at the semi-final level",
+        "Students from Grades 1–9 will explore engaging, world class Innovation Courses.",
+      details:
+        "Certificate awarded featuring top brands/companies & Free entry to Innoventure Round 1 upon completion",
     },
     {
-      date: "June 30, 2024",
-      title: "National Finals",
+      date: "September - October 2025",
+      title: "Innoventure Round 1",
       description:
-        "Championship event with awards ceremony and industry recognition",
+        "Creative Thinking Challenge. To be done online anytime at your school’s chosen date",
     },
     {
-      date: "June 30, 2024",
-      title: "National Finals",
+      date: " Nov - Mid Dec, 2025",
+      title: "Innoventure Round 2:",
       description:
-        "Championship event with awards ceremony and industry recognition",
+        "National semifinalists students will have an online  interview on their own chosen date and time.",
     },
     {
-      date: "June 30, 2024",
-      title: "National Finals",
-      description:
-        "Championship event with awards ceremony and industry recognition",
+      date: "January, 2026",
+      title: "National School Innovation Ranking",
+      description: "Whole school performance report and awards announced",
+      details:
+        "Also published in Education World Magazine, post the award ceremony in Jan,2026",
+    },
+    {
+      date: "Jan end, 2026",
+      title: "Innoventure National Finale",
+      description: "Offline event with jury presentations and Award Ceremony.",
     },
   ];
   const [selectedEvent, setSelectedEvent] = useState<TimelineEvent | null>(
@@ -82,26 +93,26 @@ export default function TimelineSection() {
           </p>
         </motion.div>
 
-        <div className="w-full px-4 py-12 md:mt-28 min-h-[150px]">
-          <div className="relative flex flex-col md:flex-row md:justify-between items-center">
-            <div className="absolute md:top-1/2 top-0 md:left-0 md:right-0 left-4 h-full md:h-1 w-1 md:w-full bg-violet-200 z-0" />
+        <div className="w-full px-4 py-12 lg:mt-28 min-h-[150px]">
+          <div className="relative flex flex-col lg:flex-row lg:justify-between items-center">
+            <div className="absolute lg:top-1/2 top-0 lg:left-0 lg:right-0 left-2 h-full lg:h-1 w-1 lg:w-full bg-violet-200 z-0" />
 
             {timelineEvents.map((event, index) => (
               <div
                 key={index}
                 onClick={() => handleClick(event)}
-                className="relative cursor-pointer md:w-1/4 w-full flex flex-col items-center md:items-center mb-10 md:mb-0"
+                className="relative cursor-pointer lg:w-1/4 w-full flex flex-col items-center lg:items-center mb-10 lg:mb-0"
               >
                 {/* Desktop card */}
                 <div
-                  className={`hidden md:block mb-6 md:mb-0 md:absolute md:w-64 ${
+                  className={`hidden lg:block mb-6 lg:mb-0 lg:absolute lg:w-64 ${
                     index % 2 === 0
                       ? "bottom-[30%] translate-y-full"
                       : "top-[30%] -translate-y-full"
                   }`}
                 >
                   <div className="p-4 rounded-xl shadow-md text-center">
-                    <h3 className="text-violet-300 font-semibold">
+                    <h3 className="text-violet-600 font-semibold">
                       {event.date}
                     </h3>
                     <h4 className="text-lg font-bold mt-1">{event.title}</h4>
@@ -110,10 +121,10 @@ export default function TimelineSection() {
                 </div>
 
                 {/* Dot */}
-                <div className="z-10 absolute md:static left-5 top-1/2 -translate-y-1/2 md:-translate-y-0 -translate-x-1/2 w-5 h-5 rounded-full bg-violet-500 border-4 border-white shadow-lg" />
+                <div className="z-10 absolute lg:static left-2 top-1/2 -translate-y-1/2 lg:-translate-y-0 -translate-x-1/2 w-5 h-5 rounded-full bg-violet-500 border-4 border-white shadow-lg" />
 
                 {/* Mobile card */}
-                <div className="md:hidden mt-4 w-full">
+                <div className="lg:hidden mt-4 w-full">
                   <div className="ml-5 p-4 rounded-xl shadow-md">
                     <h3 className="text-violet-400 font-semibold">
                       {event.date}
@@ -137,8 +148,10 @@ export default function TimelineSection() {
                       </DialogDescription>
                     </DialogHeader>
                     <div className="mt-2 text-sm">
-                      <p>{selectedEvent.description}</p>
-                      {/* You can add more details here like speakers, images, links, etc. */}
+                      <li> {selectedEvent.description}</li>
+                      {selectedEvent?.details && (
+                        <li> {selectedEvent?.details}</li>
+                      )}
                     </div>
                   </>
                 )}

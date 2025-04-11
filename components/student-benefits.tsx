@@ -14,9 +14,8 @@ export default function StudentBenefits() {
     },
     {
       icon: <Award className="h-10 w-10 text-orange-500" />,
-      title: "Powered by India’s 1st Agentic-AI Innovation Framework",
-      description:
-        "Learn in a faster, fun and engaging way — with feedback that helps you grow",
+      title: "Certificates featuring Leading Brands",
+      description: "Build your profile with course completion certificates",
     },
     {
       icon: <BookOpen className="h-10 w-10 text-orange-500" />,
@@ -26,21 +25,21 @@ export default function StudentBenefits() {
     },
     {
       icon: <Lightbulb className="h-10 w-10 text-orange-500" />,
-      title: "Compete in the National Innovation Challenge (Round 1 — Free)",
+      title: "Participate (Free) in the Innoventure Challenge",
       description:
-        "Showcase your skills and advance toward the National Finale.",
+        "Present your ideas and earn a certificate from IIT Hyderabad.",
     },
     {
       icon: <Lightbulb className="h-10 w-10 text-orange-500" />,
-      title: "National Finale at IIT Hyderabad",
-      description:
-        "Present your ideas at one of India’s top institutions and earn a certificate from IIT Hyderabad.",
+      title: "Win the Innoventure Student Awards",
+      description: "Be celebrated as one of India’s top young innovators",
     },
 
     {
       icon: <Lightbulb className="h-10 w-10 text-orange-500" />,
-      title: "Certificates featuring Leading Companies",
-      description: "Build your profile with Course completion certificates",
+      title: "Pathways to Real Impact",
+      description:
+        "Past students have won awards, grants, launched initiatives, filed patents and gained global recognition.",
     },
   ];
 
@@ -86,7 +85,7 @@ export default function StudentBenefits() {
             Student Benefits
           </h2>
           <p className="max-w-[700px] text-gray-200 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            How Intelligence Plus helps students excel academically and beyond
+            Why every student must not miss this experience and opportunity
           </p>
         </motion.div>
 
@@ -98,16 +97,11 @@ export default function StudentBenefits() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              whileHover={{ y: -10, transition: { duration: 0.2 } }}
-              className="relative"
+              className="relative h-full min-h-[270px] w-full bg-white rounded-3xl p-6 h-full w-full shadow-xl flex items-center justify-center flex-col text-center"
             >
-              <div className="bg-white rounded-3xl p-6 h-full shadow-xl">
-                <div className="flex flex-col items-center text-center">
-                  <div className="mb-4">{benefit.icon}</div>
-                  <h3 className="text-xl font-bold mb-2">{benefit.title}</h3>
-                  <p className="text-gray-600">{benefit.description}</p>
-                </div>
-              </div>
+              <div className="">{benefit.icon}</div>
+              <h3 className="text-xl font-bold mb-2">{benefit.title}</h3>
+              <p className="text-gray-600">{benefit.description}</p>
 
               {/* Decorative wave elements */}
               <motion.div
