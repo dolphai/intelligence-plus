@@ -5,13 +5,13 @@ import { motion } from "framer-motion";
 export default function PartnersSection() {
   const partners = [
     {
-      logo: "https://www.mapro.com/cdn/shop/files/Group_139560_2x_de61683a-e433-4113-85a8-314587f529a6.jpg?height=628&pad_color=fff&v=1660288307&width=1200",
+      logo: "/partner1.png",
     },
     {
-      logo: "https://companieslogo.com/img/orig/TATAMOTORS.NS-1c3e3e90.png?t=1720244494",
+      logo: "/partner2.jpeg",
     },
     {
-      logo: "https://upload.wikimedia.org/wikipedia/commons/2/23/OYO_Rooms_logo.png",
+      logo: "/partner3.png",
     },
   ];
 
@@ -33,7 +33,7 @@ export default function PartnersSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-3 gap-8 items-center">
+        <div className="mx-auto max-w-3xl grid grid-cols-3 gap-8 items-center">
           {partners.map((partner, index) => (
             <motion.div
               key={index}
@@ -46,13 +46,9 @@ export default function PartnersSection() {
             >
               <img
                 src={partner.logo || "/placeholder.svg"}
-                alt={partner.name}
-                className="max-h-12 w-auto hover:grayscale-0 transition-all duration-300"
+                alt="Logo"
+                className="h-28 hover:grayscale-0 transition-all duration-300"
               />
-              <div className="text-center text-md">
-                <p className="font-bold">{partner.name}</p>
-                <p className="text-sm opacity-50 text-sm">{partner.type}</p>
-              </div>
             </motion.div>
           ))}
         </div>

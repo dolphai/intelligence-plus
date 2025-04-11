@@ -9,6 +9,7 @@ import {
   MapPin,
   Phone,
   Twitter,
+  Youtube,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -32,28 +33,28 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <Link
-                href="#"
+                href="https://www.facebook.com/share/1AUhJfseKt/"
                 className="hover:text-violet-400 transition-colors"
               >
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
               </Link>
               <Link
-                href="#"
+                href="https://youtube.com/@theintelligenceplus"
                 className="hover:text-violet-400 transition-colors"
               >
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
+                <Youtube className="h-5 w-5" />
+                <span className="sr-only">YouTube</span>
               </Link>
               <Link
-                href="#"
+                href="https://www.instagram.com/innoventure_trailblazer"
                 className="hover:text-violet-400 transition-colors"
               >
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </Link>
               <Link
-                href="#"
+                href="https://www.linkedin.com/company/innoventureconceptualizedbyintelligenceplus/"
                 className="hover:text-violet-400 transition-colors"
               >
                 <Linkedin className="h-5 w-5" />
@@ -122,11 +123,11 @@ export default function Footer() {
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 mr-2 text-violet-400" />
-                <span>(123) 456-7890</span>
+                <span>9922210946</span>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-2 text-violet-400" />
-                <span>info@intelligentplus.edu</span>
+                <span>events@intelligenceplus.in</span>
               </li>
             </ul>
           </motion.div>

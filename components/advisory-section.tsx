@@ -11,7 +11,7 @@ export default function AdvisorySection() {
     },
     {
       type: "logo",
-      link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb_OJQ7SD7LfUt1nZQGfi1oEhzdr39TAL3Sw&s",
+      link: "https://nisp.mic.gov.in/assets/img/MoE-Logo.png",
     },
     {
       type: "logo",
@@ -19,7 +19,11 @@ export default function AdvisorySection() {
     },
     {
       type: "logo",
-      link: "https://i.pinimg.com/736x/68/99/ff/6899ff91faecd2acccbf4e87020bd8ba.jpg",
+      link: "/viksit-bharat.png",
+    },
+    {
+      type: "logo",
+      link: "https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E_SDG_logo_UN_emblem_square_trans_WEB-1024x879.png",
     },
     {
       type: "policy",
@@ -66,7 +70,7 @@ export default function AdvisorySection() {
               )}
 
               {item.type === "policy" && (
-                <div className="font-[800] h-full max-w-[250px] text-center p-4 rounded-md h-full align-middle bg-violet-600 text-white ">
+                <div className="font-[800] text-sm h-[80px] w-[250px] text-center p-4 rounded-md h-full align-middle bg-violet-600 text-white ">
                   {item.link}
                 </div>
               )}

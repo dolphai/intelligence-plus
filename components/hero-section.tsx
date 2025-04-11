@@ -28,7 +28,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              Nationwide Educational Challenges
+              India's Largest Innovation Initiative
             </motion.div>
 
             <motion.h1

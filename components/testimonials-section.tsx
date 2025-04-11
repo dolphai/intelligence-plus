@@ -8,7 +8,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "./ui/carousel";
-import Image from "next/image";
 
 export default function TestimonialsSection() {
   const testimonials = [
@@ -22,17 +21,45 @@ export default function TestimonialsSection() {
     },
     {
       name: "Pallavi Naik",
-      school: "Principal, Kalmandi Shamrao Hogh School",
+      school: "Principal, Kalmandi Shamrao Hogh School, Maharashtra",
       link: "https://www.youtube.com/embed/6CIf8t2VEUA",
       quote:
         "The learning that comes out of this experience is immense and we see that learning getting transferred into the Atal Tinkering projects that the children work on in the school.",
     },
     {
       name: "Promini Chopra",
-      school: "Principal, Seth MR Jaipuria",
+      school: "Principal, Seth MR Jaipuria, Uttar Pradesh",
       link: "https://www.youtube.com/embed/RXUhIWhpoIg",
       quote:
         "We often ask if our children our future-ready, there have been seminars in which speakers talk about making our children future-ready, but you have done made them put it into action through InnoVenture",
+    },
+    {
+      name: "Shampa Mukherjee",
+      school: "School Leader, Campion School, Mumbai ",
+      link: "https://www.youtube.com/embed/ZmQivk1YYu0",
+      quote:
+        "Just imagine a 4th grader student coming up to me and talking about ideas of how society needs to change- that's the power of Innoventue for you! It's amazing to see how students are talking about sustainability, feasibility. All the credit goes to Innoventure Team",
+    },
+    {
+      name: "Awan Chibber",
+      school: "School Leader, Learning Paths School Mohali, Punjab",
+      link: "/placeholder.svg",
+      quote:
+        "It's an amazing platform that unites all the schools for innovation and a great initiative  for children to think out of the box, be creative, become empathic , good decision makers and changemakers",
+    },
+    {
+      name: "Anita Jayaram",
+      school: "Principal, The Foundation School, Karnataka",
+      link: "/placeholder.svg",
+      quote:
+        "I am very happy to see that there is an organization that wants children to think for themselves and create solutions for problems, otherwise they would be left with their books and devices. It's a very very good initiative in the right direction and I hope many more children will take this opportunity to learn to come up with innovative solutions.",
+    },
+    {
+      name: "Ms Brinda Ghosh",
+      school: "Principal, Gyanshree School, ",
+      link: "https://www.youtube.com/embed/hK4ymq9_DOI",
+      quote:
+        "The future is about design thinking. The kind of questions, training, interaction with experts, mentorship that our students have received over the last 5-6 years is fantastic. So happy that are children are getting these opportunities.",
     },
   ];
 
@@ -64,7 +91,7 @@ export default function TestimonialsSection() {
                   className="w-full sm:basis-1/2 lg:basis-1/3 py-5"
                 >
                   <motion.div
-                    className="mx-auto rounded-xl overflow-hidden shadow-lg flex flex-col"
+                    className="mx-auto rounded-xl overflow-hidden shadow-lg flex flex-col md:h-[500px]"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
