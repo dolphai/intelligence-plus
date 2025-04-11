@@ -38,28 +38,35 @@ export default function TestimonialsSection() {
       school: "School Leader, Campion School, Mumbai ",
       link: "https://www.youtube.com/embed/ZmQivk1YYu0",
       quote:
-        "Just imagine a 4th grader student coming up to me and talking about ideas of how society needs to change- that's the power of Innoventue for you! It's amazing to see how students are talking about sustainability, feasibility. All the credit goes to Innoventure Team",
+        "In Innoventure, there is no rote learning, the questions are framed in such a way that it compels the children to think creatively. The number of students eager to be a partl is increasing every year. It really nurtures their innovation skills in these critical times.",
     },
     {
       name: "Awan Chibber",
       school: "School Leader, Learning Paths School Mohali, Punjab",
       link: "/placeholder.svg",
       quote:
-        "It's an amazing platform that unites all the schools for innovation and a great initiative  for children to think out of the box, be creative, become empathic , good decision makers and changemakers",
+        "Just imagine a 4th grader student coming up to me and talking about ideas of how society needs to change- that's the power of Innoventue for you! It's amazing to see how students are talking about sustainability, feasibility. All the credit goes to Innoventure Team",
     },
     {
       name: "Anita Jayaram",
       school: "Principal, The Foundation School, Karnataka",
       link: "/placeholder.svg",
       quote:
-        "I am very happy to see that there is an organization that wants children to think for themselves and create solutions for problems, otherwise they would be left with their books and devices. It's a very very good initiative in the right direction and I hope many more children will take this opportunity to learn to come up with innovative solutions.",
+        "It's an amazing platform that unites all the schools for innovation and a great initiative  for children to think out of the box, be creative, become empathic , good decision makers and changemakers",
     },
     {
       name: "Ms Brinda Ghosh",
       school: "Principal, Gyanshree School, ",
       link: "https://www.youtube.com/embed/hK4ymq9_DOI",
       quote:
-        "The future is about design thinking. The kind of questions, training, interaction with experts, mentorship that our students have received over the last 5-6 years is fantastic. So happy that are children are getting these opportunities.",
+        "I am very happy to see that there is an organization that wants children to think for themselves and create solutions for problems, otherwise they would be left with their books and devices. It's a very very good initiative in the right direction and I hope many more children will take this opportunity to learn to come up with innovative solutions",
+    },
+    {
+      name: "Usha Kumaraswamy",
+      school: "Principal Chellammal Vidyalaya, Tamil Nadu",
+      link: "https://www.youtube.com/embed/z03U8FXV6wQ",
+      quote:
+        "The future is about design thinking. The kind of questions, training, interaction with experts, mentorship that our students have received over the last 5-6 years is fantastic. So happy that are children are getting these opportunities. ",
     },
   ];
 
