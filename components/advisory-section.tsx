@@ -66,7 +66,7 @@ export default function AdvisorySection() {
               )}
 
               {item.type === "policy" && (
-                <div className="font-[800] max-w-[200px] text-center p-4 rounded-md h-full align-middle bg-violet-600 text-white ">
+                <div className="font-[800] h-full max-w-[250px] text-center p-4 rounded-md h-full align-middle bg-violet-600 text-white ">
                   {item.link}
                 </div>
               )}

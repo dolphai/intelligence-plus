@@ -68,21 +68,21 @@ export default function StudentAchievements() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1, duration: 0.5 }}
-                  className="relative shadow-lg rounded-3xl flex items-center flex-col md:flex-row justify-between basis-1/2"
+                  className="relative shadow-lg rounded-3xl flex items-center flex-col md:flex-col justify-between basis-1/2"
                 >
-                  <div className="md:col-span-7 p-6 md:p-10 flex flex-col justify-center">
-                    <h3 className="text-2xl md:text-3xl font-bold mb-2">
-                      {achievement.studentName}
-                    </h3>
-                    <div className="w-24 h-1 bg-orange-400 rounded-full mb-4"></div>
-                    <p className="font-bold text-lg">{achievement.text}</p>
-                  </div>
-                  <div className="md:col-span-5 p-4 relative w-full h-full min-h-[200px]">
+                  <div className="md:col-span-5 p-4 relative w-full h-full">
                     <img
                       src={achievement.image}
                       alt={achievement.text}
-                      className="rounded-3xl"
+                      className="rounded-3xl max-h-[350px] aspect-video"
                     />
+                    <div className="md:col-span-7 p-6 md:p-10 flex flex-col justify-center">
+                      <h3 className="text-2xl md:text-3xl font-bold mb-2">
+                        {achievement.studentName}
+                      </h3>
+                      <div className="w-24 h-1 bg-orange-400 rounded-full mb-4"></div>
+                      <p className="font-bold text-lg">{achievement.text}</p>
+                    </div>
                   </div>
                 </motion.div>
               </CarouselItem>

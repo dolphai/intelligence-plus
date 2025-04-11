@@ -2,41 +2,47 @@
 
 import { motion } from "framer-motion";
 
-import { Award, BarChart, BookOpen, Lightbulb } from "lucide-react";
+import {
+  Award,
+  BookOpenCheck,
+  Globe,
+  GraduationCap,
+  Mic,
+  Trophy,
+} from "lucide-react";
 
 export default function StudentBenefits() {
   const benefits = [
     {
-      icon: <BarChart className="h-10 w-10 text-orange-500" />,
+      icon: <GraduationCap className="h-10 w-10 text-blue-500" />,
       title: "Free Access to the Innoventure Innovation Course",
       description:
-        "Learn age-appropriate innovation skills through  mini-episodes using the case study method pioneered at Harvard",
+        "Learn age-appropriate innovation skills through mini-episodes using the case study method pioneered at Harvard",
     },
     {
-      icon: <Award className="h-10 w-10 text-orange-500" />,
+      icon: <Award className="h-10 w-10 text-yellow-500" />,
       title: "Certificates featuring Leading Brands",
       description: "Build your profile with course completion certificates",
     },
     {
-      icon: <BookOpen className="h-10 w-10 text-orange-500" />,
+      icon: <BookOpenCheck className="h-10 w-10 text-green-500" />,
       title: "Master Real-World Innovation Skills",
       description:
         "Ideation, design thinking, problem-solving, storytelling, pitching, and more.",
     },
     {
-      icon: <Lightbulb className="h-10 w-10 text-orange-500" />,
+      icon: <Mic className="h-10 w-10 text-purple-500" />,
       title: "Participate (Free) in the Innoventure Challenge",
       description:
         "Present your ideas and earn a certificate from IIT Hyderabad.",
     },
     {
-      icon: <Lightbulb className="h-10 w-10 text-orange-500" />,
+      icon: <Trophy className="h-10 w-10 text-pink-500" />,
       title: "Win the Innoventure Student Awards",
       description: "Be celebrated as one of India’s top young innovators",
     },
-
     {
-      icon: <Lightbulb className="h-10 w-10 text-orange-500" />,
+      icon: <Globe className="h-10 w-10 text-red-500" />,
       title: "Pathways to Real Impact",
       description:
         "Past students have won awards, grants, launched initiatives, filed patents and gained global recognition.",

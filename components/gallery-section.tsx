@@ -42,35 +42,16 @@ export default function GallerySection() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              whileHover={{ scale: 1.03 }}
               onClick={() => setSelectedImage(image.src)}
             >
               <img
                 src={image.src || "/placeholder.svg"}
                 alt={image.alt}
-                className="w-full object-cover transition-transform duration-500 hover:scale-110"
+                className="w-full object-cover transition-transform duration-500 "
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
-                <p className="text-white p-4 text-sm">{image.alt}</p>
-              </div>
             </motion.div>
           ))}
         </div>
-
-        <Dialog
-          open={!!selectedImage}
-          onOpenChange={() => setSelectedImage(null)}
-        >
-          <DialogContent className="max-w-4xl p-0 overflow-hidden">
-            {selectedImage && (
-              <img
-                src={selectedImage || "/placeholder.svg"}
-                alt="Gallery image"
-                className="w-full h-auto"
-              />
-            )}
-          </DialogContent>
-        </Dialog>
       </div>
     </section>
   );
