@@ -19,10 +19,6 @@ export default function AdvisorySection() {
     },
     {
       type: "logo",
-      link: "/viksit-bharat.png",
-    },
-    {
-      type: "logo",
       link: "https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E_SDG_logo_UN_emblem_square_trans_WEB-1024x879.png",
     },
     {
@@ -40,7 +36,7 @@ export default function AdvisorySection() {
   ];
 
   return (
-    <section className="w-full py-12 md:py-24 bg-gray-50 overflow-hidden">
+    <section className="w-full py-12 bg-gray-50 overflow-hidden">
       <div className="container px-4 md:px-6">
         <motion.div
           className="flex flex-col items-center text-center space-y-4 mb-12"
@@ -49,13 +45,19 @@ export default function AdvisorySection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
             Advisory Guidelines
           </h2>
+          <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            Aligned to the goals and guidelines of
+          </p>
         </motion.div>
 
         {/* Marquee Container */}
-        <Marquee className="relative mx-auto w-full max-w-4xl overflow-hidden">
+        <Marquee
+          pauseOnHover={true}
+          className="relative mx-auto w-full max-w-4xl overflow-hidden"
+        >
           {[...guidelines, ...guidelines].map((item, index) => (
             <div
               key={index}

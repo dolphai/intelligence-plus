@@ -47,17 +47,17 @@ export default function TimelineSection() {
         "Creative Thinking Challenge. To be done online anytime at your school’s chosen date",
     },
     {
-      date: " Nov - Mid Dec, 2025",
-      title: "Innoventure Round 2:",
-      description:
-        "National semifinalists students will have an online  interview on their own chosen date and time.",
-    },
-    {
-      date: "January, 2026",
+      date: "November, 2025",
       title: "National School Innovation Ranking",
       description: "Whole school performance report and awards announced",
       details:
         "Also published in Education World Magazine, post the award ceremony in Jan,2026",
+    },
+    {
+      date: " Nov - Mid Dec, 2025",
+      title: "Innoventure Round 2:",
+      description:
+        "National semifinalists students will have an online  interview on their own chosen date and time.",
     },
     {
       date: "Jan end, 2026",
@@ -76,24 +76,24 @@ export default function TimelineSection() {
   const closeDialog = () => setSelectedEvent(null);
 
   return (
-    <section id="timeline" className="w-full py-12 md:py-24 bg-gray-50">
+    <section
+      id="timeline"
+      className="w-full py-12 md:py-24 bg-gray-50 bg-gradient-to-b from-indigo-950 to-violet-900"
+    >
       <div className="container px-4 md:px-6">
         <motion.div
-          className="flex flex-col items-center text-center space-y-4 mb-12"
+          className="flex flex-col items-center text-center space-y-4 mb-4 xl:mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Timeline & Round Details
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-orange-400">
+            Process Timeline & Round Details
           </h2>
-          <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Key dates for the upcoming Intelligence Plus National Challenge
-          </p>
         </motion.div>
 
-        <div className="w-full px-4 py-12 lg:mt-28 min-h-[150px]">
+        <div className="w-full px-4 py-12 mt-0 lg:mt-40 min-h-[200px]">
           <div className="relative flex flex-col lg:flex-row lg:justify-between items-center">
             <div className="absolute lg:top-1/2 top-0 lg:left-0 lg:right-0 left-2 h-full lg:h-1 w-1 lg:w-full bg-violet-200 z-0" />
 
@@ -105,9 +105,9 @@ export default function TimelineSection() {
               >
                 {/* Desktop card */}
                 <div
-                  className={`hidden lg:block mb-6 lg:mb-0 lg:absolute lg:w-64 ${
+                  className={`hidden bg-white rounded-xl lg:block mb-6 lg:mb-0 lg:absolute lg:w-64 ${
                     index % 2 === 0
-                      ? "bottom-[30%] translate-y-full"
+                      ? "bottom-[10%] translate-y-full"
                       : "top-[30%] -translate-y-full"
                   }`}
                 >
@@ -124,8 +124,8 @@ export default function TimelineSection() {
                 <div className="z-10 absolute lg:static left-2 top-1/2 -translate-y-1/2 lg:-translate-y-0 -translate-x-1/2 w-5 h-5 rounded-full bg-violet-500 border-4 border-white shadow-lg" />
 
                 {/* Mobile card */}
-                <div className="lg:hidden mt-4 w-full">
-                  <div className="ml-5 p-4 rounded-xl shadow-md">
+                <div className="lg:hidden rounded-xl w-full">
+                  <div className="ml-5 p-4  bg-white rounded-xl shadow-md">
                     <h3 className="text-violet-400 font-semibold">
                       {event.date}
                     </h3>

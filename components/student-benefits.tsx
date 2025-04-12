@@ -52,7 +52,7 @@ export default function StudentBenefits() {
   return (
     <section
       id="student-benefits"
-      className="w-full py-12 md:py-24 bg-gradient-to-b from-indigo-950 to-violet-900 relative overflow-hidden"
+      className="w-full py-12 bg-gradient-to-b from-indigo-950 to-violet-900 relative overflow-hidden"
     >
       {/* Stars background */}
       <div className="absolute inset-0 overflow-hidden">
@@ -87,10 +87,10 @@ export default function StudentBenefits() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-orange-400">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl  text-orange-400">
             Student Benefits
           </h2>
-          <p className="max-w-[700px] text-gray-200 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+          <p className="max-w-[700px] text-gray-200 lg:text-base/relaxed xl:text-xl/relaxed">
             Why every student must not miss this experience and opportunity
           </p>
         </motion.div>

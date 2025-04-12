@@ -25,7 +25,7 @@ export default function PartnersSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
             Our Partners
           </h2>
           <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -47,7 +47,7 @@ export default function PartnersSection() {
               <img
                 src={partner.logo || "/placeholder.svg"}
                 alt="Logo"
-                className="h-28 hover:grayscale-0 transition-all duration-300"
+                className="sm:h-28 md:w-[auto] hover:grayscale-0 transition-all duration-300"
               />
             </motion.div>
           ))}

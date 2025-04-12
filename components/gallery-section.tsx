@@ -1,12 +1,10 @@
 "use client";
 
-import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import Link from "next/link";
+import { Button } from "./ui/button";
 
 export default function GallerySection() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
-
   const images = [
     {
       src: "/school-logos.jpeg",
@@ -15,7 +13,7 @@ export default function GallerySection() {
   ];
 
   return (
-    <section className="w-full py-12 md:py-24 bg-gray-50">
+    <section className="w-full py-12 bg-gradient-to-b from-indigo-950 to-violet-900">
       <div className="container px-4 md:px-6">
         <motion.div
           className="flex flex-col items-center text-center space-y-4 mb-12"
@@ -24,10 +22,10 @@ export default function GallerySection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-white ">
             The Best Schools of the country join in the Vision and the Value!
           </h2>
-          <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+          <p className="text-gray-200 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
             Collectively Leveling -Up the Schools and Empowering Students with
             "Innovation Education"
           </p>
@@ -42,7 +40,6 @@ export default function GallerySection() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              onClick={() => setSelectedImage(image.src)}
             >
               <img
                 src={image.src || "/placeholder.svg"}
@@ -53,6 +50,28 @@ export default function GallerySection() {
           ))}
         </div>
       </div>
+      <motion.div
+        className="py-12 text-center"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.3, duration: 0.5 }}
+      >
+        <h3 className="text-3xl sm:text-4xl font-bold mb-6 text-white">
+          How you can stand out
+        </h3>
+        <Button
+          size="lg"
+          className="bg-orange-500 hover:bg-orange-600 text-white"
+        >
+          <Link
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfBSD35zx1tlJ9H-FCfv2N1VsaEaKuMi8FfOH7cAmQSiGRV0w/viewform"
+            target="_blank"
+          >
+            Join the Innovation Movement - No Cost
+          </Link>
+        </Button>
+      </motion.div>
     </section>
   );
 }

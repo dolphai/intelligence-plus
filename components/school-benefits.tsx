@@ -1,20 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  Award,
-  BarChart,
-  BarChart3,
-  BookOpen,
-  Brain,
-  FileText,
-  Lightbulb,
-  Medal,
-  Star,
-  Trophy,
-} from "lucide-react";
-import { Button } from "./ui/button";
+import { BarChart3, Brain, FileText, Medal, Star, Trophy } from "lucide-react";
 import Link from "next/link";
+import { Button } from "./ui/button";
 
 export default function SchoolBenefits() {
   const benefits = [
@@ -44,7 +33,7 @@ export default function SchoolBenefits() {
     },
     {
       icon: <Trophy className="h-10 w-10 text-red-500" />,
-      title: "MOE -Aligned Initiative",
+      title: "MOE - Aligned Initiative",
       description:
         "Lead with credibility and showcase implementation of NPPIS, IIE and NEP 2020 goals ",
     },
@@ -59,7 +48,7 @@ export default function SchoolBenefits() {
   return (
     <section
       id="school-benefits"
-      className="w-full py-12 md:py-24 bg-gradient-to-b from-indigo-950 to-violet-900 relative overflow-hidden"
+      className="w-full py-12 bg-gradient-to-b from-indigo-950 to-violet-900 relative overflow-hidden"
     >
       {/* Stars background */}
       <div className="absolute inset-0 overflow-hidden">

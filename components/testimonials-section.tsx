@@ -13,7 +13,7 @@ export default function TestimonialsSection() {
   const testimonials = [
     {
       name: "Radha Baruah",
-      school: "Principal Sanskriti the Gurukul, Assam",
+      school: "Principal, Sanskriti the Gurukul, Assam",
       link: "https://www.youtube.com/embed/Y8xg18-FwYo",
 
       quote:
@@ -21,7 +21,7 @@ export default function TestimonialsSection() {
     },
     {
       name: "Pallavi Naik",
-      school: "Principal, Kalmandi Shamrao Hogh School, Maharashtra",
+      school: "Principal, Kalmandi Shamrao High School, Maharashtra",
       link: "https://www.youtube.com/embed/6CIf8t2VEUA",
       quote:
         "The learning that comes out of this experience is immense and we see that learning getting transferred into the Atal Tinkering projects that the children work on in the school.",
@@ -35,35 +35,35 @@ export default function TestimonialsSection() {
     },
     {
       name: "Shampa Mukherjee",
-      school: "School Leader, Campion School, Mumbai ",
+      school: "School Leader, Campion School, Maharashtra ",
       link: "https://www.youtube.com/embed/ZmQivk1YYu0",
       quote:
         "In Innoventure, there is no rote learning, the questions are framed in such a way that it compels the children to think creatively. The number of students eager to be a partl is increasing every year. It really nurtures their innovation skills in these critical times.",
     },
     {
       name: "Awan Chibber",
-      school: "School Leader, Learning Paths School Mohali, Punjab",
-      link: "/placeholder.svg",
+      school: "School Leader, Learning Paths School, Punjab",
+      link: "https://www.youtube.com/embed/QuIOY2Us52U",
       quote:
         "Just imagine a 4th grader student coming up to me and talking about ideas of how society needs to change- that's the power of Innoventue for you! It's amazing to see how students are talking about sustainability, feasibility. All the credit goes to Innoventure Team",
     },
     {
       name: "Anita Jayaram",
       school: "Principal, The Foundation School, Karnataka",
-      link: "/placeholder.svg",
+      link: "https://www.youtube.com/embed/V7aFpnH4qJE",
       quote:
         "It's an amazing platform that unites all the schools for innovation and a great initiative  for children to think out of the box, be creative, become empathic , good decision makers and changemakers",
     },
     {
       name: "Ms Brinda Ghosh",
-      school: "Principal, Gyanshree School, ",
+      school: "Principal, Gyanshree School, Uttar Pradesh",
       link: "https://www.youtube.com/embed/hK4ymq9_DOI",
       quote:
         "I am very happy to see that there is an organization that wants children to think for themselves and create solutions for problems, otherwise they would be left with their books and devices. It's a very very good initiative in the right direction and I hope many more children will take this opportunity to learn to come up with innovative solutions",
     },
     {
       name: "Usha Kumaraswamy",
-      school: "Principal Chellammal Vidyalaya, Tamil Nadu",
+      school: "Principal, Chellammal Vidyalaya, Tamil Nadu",
       link: "https://www.youtube.com/embed/z03U8FXV6wQ",
       quote:
         "The future is about design thinking. The kind of questions, training, interaction with experts, mentorship that our students have received over the last 5-6 years is fantastic. So happy that are children are getting these opportunities. ",
@@ -71,7 +71,7 @@ export default function TestimonialsSection() {
   ];
 
   return (
-    <section id="testimonials" className="w-full py-12 md:py-24 bg-white">
+    <section id="testimonials" className="w-full py-12 bg-white">
       <div className="container px-4 md:px-6">
         <motion.div
           className="flex flex-col items-center text-center space-y-4 mb-12"
@@ -80,11 +80,11 @@ export default function TestimonialsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
             The Innovation Advantage: Why School Leaders choose the Innoventure
             Platform
           </h2>
-          <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+          <p className="max-w-[700px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
             Trusted By Educators, Backed by Research and Results
           </p>
         </motion.div>

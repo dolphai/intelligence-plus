@@ -173,10 +173,10 @@ export default function FaqSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
             Frequently Asked Questions
           </h2>
-          <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+          <p className="max-w-[700px] text-gray-500  lg:text-base/relaxed xl:text-xl/relaxed">
             Find answers to common questions about our programs
           </p>
         </motion.div>
