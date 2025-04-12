@@ -21,7 +21,8 @@ export default function StakeholderSection() {
     {
       name: "Padma Vibhushan Dr. Raghunath Mashelkar",
       desg: "Reknowned Indian Scientist & Innovator",
-      image: "https://pharmabiz.com/newsimages/172074Mashelkar.jpeg",
+      image:
+        "https://media.licdn.com/dms/image/v2/D4D12AQFRhdbyW5RM-g/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1724202308979?e=2147483647&v=beta&t=T72iLkyw1xiBFSBq3JVif3cs4FyHqo5-nS4cFnu8gb8",
       quote:
         "Innoventure is a brilliant platform that nurtures essential skills like ideation, innovation, and critical thinking in children—skills vital for building a strong foundation for young India. With over a decade of impact, it aligns perfectly with NEP 2020’s vision of moving from content-heavy learning to higher-order thinking and innovation.",
     },
@@ -44,8 +45,7 @@ export default function StakeholderSection() {
     {
       name: "Air Marshal Bhushan Gokhale",
       desg: "Ex- Vice Chair of Air Staff, India; Chairman, MES Education",
-      image:
-        "https://www.smartstateindia.com/wp-content/uploads/2020/08/AM_Bhushan_Gokhale.jpg",
+      image: "/bhushan-gokhale.png",
       quote:
         "Innoventure is a great platform for the young minds & can truly be taken to the National and International level because technology and such innovation processes are very important for national development.",
     },

@@ -6,7 +6,9 @@ import StakeholderSection from "@/components/stakeholder-section";
 import SchoolBenefits from "@/components/school-benefits";
 import TestimonialsSection from "@/components/testimonials-section";
 import StudentBenefits from "@/components/student-benefits";
-import StudentAchievements from "@/components/student-achievements";
+import StudentAchievements, {
+  AnimatedAchievementsDemo,
+} from "@/components/student-achievements";
 import TimelineSection from "@/components/timeline-section";
 import PartnersSection from "@/components/partners-section";
 import GallerySection from "@/components/gallery-section";
@@ -31,7 +33,7 @@ export default function Home() {
       <SchoolBenefits />
       <TestimonialsSection />
       <StudentBenefits />
-      <StudentAchievements />
+      <AnimatedAchievementsDemo />
       <TimelineSection />
       <PartnersSection />
       <GallerySection />
