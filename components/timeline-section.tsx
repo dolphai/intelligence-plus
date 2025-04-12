@@ -9,6 +9,8 @@ import {
   DialogHeader,
   DialogTitle,
 } from "./ui/dialog";
+import { ChevronRight } from "lucide-react";
+import { Button } from "./ui/button";
 
 type TimelineEvent = {
   date: string;
@@ -93,7 +95,7 @@ export default function TimelineSection() {
           </h2>
         </motion.div>
 
-        <div className="w-full px-4 py-12 mt-0 lg:mt-40 min-h-[200px]">
+        <div className="w-full px-4 py-12 mt-0 md:mt-48 min-h-[200px]">
           <div className="relative flex flex-col lg:flex-row lg:justify-between items-center">
             <div className="absolute lg:top-1/2 top-0 lg:left-0 lg:right-0 left-2 h-full lg:h-1 w-1 lg:w-full bg-violet-200 z-0" />
 
@@ -117,6 +119,12 @@ export default function TimelineSection() {
                     </h3>
                     <h4 className="text-lg font-bold mt-1">{event.title}</h4>
                     <p className="text-sm mt-2">{event.description}</p>
+                    <Button
+                      variant="ghost"
+                      className="text-violet-500 group hover:text-violet-700 transition-transform duration-200"
+                    >
+                      Learn More
+                    </Button>
                   </div>
                 </div>
 
@@ -131,6 +139,13 @@ export default function TimelineSection() {
                     </h3>
                     <h4 className="text-lg font-bold mt-1">{event.title}</h4>
                     <p className="text-sm mt-2">{event.description}</p>
+
+                    <Button
+                      variant="ghost"
+                      className="text-violet-500 group hover:text-violet-700 transition-transform duration-200"
+                    >
+                      Learn More
+                    </Button>
                   </div>
                 </div>
               </div>
