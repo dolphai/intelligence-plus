@@ -81,7 +81,7 @@ export default function GallerySection() {
         transition={{ delay: 0.3, duration: 0.5 }}
       >
         <h3 className="text-3xl sm:text-4xl font-bold mb-6 text-white">
-          How you can stand out
+          It's time for your school & students to stand out!
         </h3>
         <Button
           size="lg"

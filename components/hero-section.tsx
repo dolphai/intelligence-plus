@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function HeroSection() {
   return (
     <section className="relative w-full h-screen overflow-hidden">
-      <div className="absolute inset-0  bg-no-repeat bg-[position:80%_top] bg-cover md:bg-cover h-screen w-full bg-[url('https://images.academicinfluence.com/res/w_800,h_450,c_pad,f_auto,q_auto/v1706889139400/tips-for-balancing-work-and-college')]" />
+      <div className="absolute inset-0  bg-no-repeat bg-[position:80%_top] bg-cover md:bg-cover h-screen w-full bg-[url('/bg.jpg')]" />
 
       <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black via-black/70 to-transparent" />
 
@@ -21,11 +21,11 @@ export default function HeroSection() {
               transition={{ delay: 0.6, duration: 0.5 }}
             >
               <img
-                src="/foundation-logo.png"
+                src="/e-cell-logo.png"
                 className="h-full w-1/2 max-w-[150px]"
               />
               <img
-                src="/e-cell-logo.png"
+                src="/foundation-logo.png"
                 className="h-full w-1/2 max-w-[150px]"
               />
             </motion.div>
