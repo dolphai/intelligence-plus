@@ -11,6 +11,7 @@ import {
 import { AnimatedAchievements } from "./ui/animated-achievements";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 const achievements = [
   {
     name: "Satyaj Hedaoo",
@@ -56,6 +57,15 @@ const achievements = [
 ];
 
 export default function StudentAchievements() {
+  const nextRef = useRef(null);
+  useEffect(() => {
+    const timeout = setInterval(() => {
+      if (nextRef.current) {
+        nextRef.current.click();
+      }
+    }, 5000);
+    return clearInterval(timeout);
+  }, []);
   return (
     <section className="w-full py-12 relative overflow-hidden flex items-center flex-col md:flex-row">
       <motion.div
@@ -112,7 +122,6 @@ export default function StudentAchievements() {
                       <h3 className="text-xl md:text-3xl mb-2">
                         {achievement.achievement}
                       </h3>
-                      <p className="font-bold text-lg">{achievement?.text}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -121,14 +130,10 @@ export default function StudentAchievements() {
           </CarouselContent>
           <div className="flex w-full items-center justify-center gap-5 mt-10">
             <CarouselPrevious className="static lg:absolute" />
-            <CarouselNext className="static lg:absolute" />
+            <CarouselNext ref={nextRef} className="static lg:absolute" />
           </div>
         </Carousel>
       </div>
     </section>
   );
-}
-
-export function AnimatedAchievementsDemo() {
-  return <AnimatedAchievements achievements={achievements} autoplay={true} />;
 }

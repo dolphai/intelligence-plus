@@ -7,9 +7,7 @@ import Navbar from "@/components/navbar";
 import PartnersSection from "@/components/partners-section";
 import SchoolBenefits from "@/components/school-benefits";
 import StakeholderSection from "@/components/stakeholder-section";
-import StudentAchievements, {
-  AnimatedAchievementsDemo,
-} from "@/components/student-achievements";
+import StudentAchievements from "@/components/student-achievements";
 import StudentBenefits from "@/components/student-benefits";
 import TestimonialsSection from "@/components/testimonials-section";
 import TimelineSection from "@/components/timeline-section";

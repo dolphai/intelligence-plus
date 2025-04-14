@@ -30,13 +30,13 @@ export default function StudentBenefits() {
       icon: <BookOpenCheck className="h-10 w-10 text-green-500" />,
       title: "Master Real-World Innovation Skills",
       description:
-        "Ideation, design thinking, problem-solving, storytelling, pitching, and more.",
+        "Ideation, design thinking, problem-solving, storytelling, pitching, and more",
     },
     {
       icon: <Mic className="h-10 w-10 text-purple-500" />,
       title: "Participate (Free) in the Innoventure Challenge",
       description:
-        "Present your ideas and earn a certificate from IIT Hyderabad.",
+        "Present your ideas and earn a certificate from E-Cell of IIT Hyderabad",
     },
     {
       icon: <Trophy className="h-10 w-10 text-pink-500" />,
@@ -47,7 +47,7 @@ export default function StudentBenefits() {
       icon: <Globe className="h-10 w-10 text-red-500" />,
       title: "Pathways to Real Impact",
       description:
-        "Past students have won awards, grants, launched initiatives, filed patents and gained global recognition.",
+        "Past students have won awards, grants, launched initiatives, filed patents and gained global recognition",
     },
   ];
 

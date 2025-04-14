@@ -11,19 +11,19 @@ export default function SchoolBenefits() {
       icon: <FileText className="h-10 w-10 text-blue-500" />,
       title: "Free Innovation Program",
       description:
-        "Research backed, self-paced & age appropriate Innovation Skills Program for grades 1st to 9th.",
+        "Research backed, self-paced & age appropriate Innovation Skills Program for grades 1st to 9th",
     },
     {
       icon: <Brain className="h-10 w-10 text-violet-500" />,
       title: "Built on India’s First Agentic-AI Platform",
       description:
-        "Personalized, cutting-edge content  that fosters real-world problem-solving and feedback.",
+        "Personalized, cutting-edge content  that fosters real-world problem-solving and feedback",
     },
     {
       icon: <BarChart3 className="h-10 w-10 text-orange-500" />,
       title: "School Innovation Performance Report",
       description:
-        "Lead with clarity on student Innovation skills and focus areas.",
+        "Lead with clarity on student Innovation skills and focus areas",
     },
     {
       icon: <Medal className="h-10 w-10 text-yellow-500" />,
@@ -41,7 +41,7 @@ export default function SchoolBenefits() {
       icon: <Star className="h-10 w-10 text-green-500" />,
       title: "Leadership Recognition",
       description:
-        "School leaders receive awards and visibility for enabling 'Innovation In Schools’. ",
+        "School leaders receive awards and visibility for enabling 'Innovation In Schools'",
     },
   ];
 

@@ -33,7 +33,7 @@ export default function Navbar() {
             <img
               src="/logo.png"
               alt="logo"
-              className="max-w-[250px] max-h-[70px]"
+              className="max-w-[250px] max-h-[50px]"
             />
           </div>
 

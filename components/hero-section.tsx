@@ -7,21 +7,28 @@ import Link from "next/link";
 export default function HeroSection() {
   return (
     <section className="relative w-full h-screen overflow-hidden">
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: `url('https://images.academicinfluence.com/res/w_800,h_450,c_pad,f_auto,q_auto/v1706889139400/tips-for-balancing-work-and-college')`, // Replace with actual image path
-        }}
-      />
+      <div className="absolute inset-0  bg-no-repeat bg-[position:80%_top] bg-cover md:bg-cover h-screen w-full bg-[url('https://images.academicinfluence.com/res/w_800,h_450,c_pad,f_auto,q_auto/v1706889139400/tips-for-balancing-work-and-college')]" />
 
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black via-black/70 to-transparent" />
 
-      {/* Content Overlay */}
-      <div className="relative z-10 flex items-center justify-center h-full">
+      <div className="relative z-10 flex items-end md:items-center justify-center h-full pb-20  md:pb-0">
         <div className="container px-4 md:px-6">
           <div className="max-w-3xl text-left space-y-6">
+            <motion.div
+              className="w-full flex items-center justify-start gap-5 md:max-h-20 md:max-w-[250px] my-5"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.5 }}
+            >
+              <img
+                src="/foundation-logo.png"
+                className="h-full w-1/2 max-w-[150px]"
+              />
+              <img
+                src="/e-cell-logo.png"
+                className="h-full w-1/2 max-w-[150px]"
+              />
+            </motion.div>
             <motion.div
               className="inline-block rounded-lg bg-white/10 px-3 py-1 text-sm text-white"
               initial={{ opacity: 0, y: 20 }}
@@ -32,7 +39,7 @@ export default function HeroSection() {
             </motion.div>
 
             <motion.h1
-              className="text-2xl md:text-6xl font-bold text-white"
+              className="text-2xl md:text-4xl font-bold text-white"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.7 }}
@@ -41,17 +48,6 @@ export default function HeroSection() {
               <span className="text-violet-300">Innovators</span> & Changemakers
               — Starting Today!
             </motion.h1>
-
-            <motion.p
-              className="text-lg md:text-xl text-white/80 max-w-xl"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4, duration: 0.7 }}
-            >
-              Bring a culture of innovation to your school with a cutting-edge
-              program, compete on a national stage, and put your students and
-              school on India’s innovation map.
-            </motion.p>
 
             <motion.div
               className="flex flex-col gap-2 sm:flex-row"
