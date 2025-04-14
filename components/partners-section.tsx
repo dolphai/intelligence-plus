@@ -5,13 +5,13 @@ import { motion } from "framer-motion";
 export default function PartnersSection() {
   const partners = [
     {
+      logo: "/partner3.png",
+    },
+    {
       logo: "/partner1.png",
     },
     {
       logo: "/partner2.jpeg",
-    },
-    {
-      logo: "/partner3.png",
     },
   ];
 
@@ -33,11 +33,11 @@ export default function PartnersSection() {
           </p>
         </motion.div>
 
-        <div className="mx-auto max-w-3xl grid grid-cols-3 gap-8 items-center">
+        <div className="mx-auto max-w-3xl grid grid-cols-3 md:gap-8 items-center">
           {partners.map((partner, index) => (
             <motion.div
               key={index}
-              className="flex flex-col items-center justify-center p-4 gap-4 shrink-0 w-full"
+              className="flex flex-col items-center justify-center sm:p-4 gap-4 shrink-0 w-full"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
