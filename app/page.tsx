@@ -1,20 +1,20 @@
-import type { Metadata } from "next";
-import HeroSection from "@/components/hero-section";
-import VideoSection from "@/components/video-section";
 import AdvisorySection from "@/components/advisory-section";
-import StakeholderSection from "@/components/stakeholder-section";
+import FaqSection from "@/components/faq-section";
+import Footer from "@/components/footer";
+import GallerySection from "@/components/gallery-section";
+import HeroSection from "@/components/hero-section";
+import Navbar from "@/components/navbar";
+import PartnersSection from "@/components/partners-section";
 import SchoolBenefits from "@/components/school-benefits";
-import TestimonialsSection from "@/components/testimonials-section";
-import StudentBenefits from "@/components/student-benefits";
+import StakeholderSection from "@/components/stakeholder-section";
 import StudentAchievements, {
   AnimatedAchievementsDemo,
 } from "@/components/student-achievements";
+import StudentBenefits from "@/components/student-benefits";
+import TestimonialsSection from "@/components/testimonials-section";
 import TimelineSection from "@/components/timeline-section";
-import PartnersSection from "@/components/partners-section";
-import GallerySection from "@/components/gallery-section";
-import FaqSection from "@/components/faq-section";
-import Footer from "@/components/footer";
-import Navbar from "@/components/navbar";
+import VideoSection from "@/components/video-section";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Intelligence Plus | Educational Courses & Challenges",
@@ -33,7 +33,7 @@ export default function Home() {
       <SchoolBenefits />
       <TestimonialsSection />
       <StudentBenefits />
-      <AnimatedAchievementsDemo />
+      <StudentAchievements />
       <TimelineSection />
       <PartnersSection />
       <GallerySection />

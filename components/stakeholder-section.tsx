@@ -82,6 +82,7 @@ export default function StakeholderSection() {
           className="mx-auto"
           opts={{
             loop: true,
+            align: "start",
           }}
         >
           <CarouselContent className="min-h-[500px]">

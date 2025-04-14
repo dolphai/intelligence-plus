@@ -80,8 +80,31 @@ export default function TimelineSection() {
   return (
     <section
       id="timeline"
-      className="w-full py-12 md:py-24 bg-gray-50 bg-gradient-to-b from-indigo-950 to-violet-900"
+      className="w-full relative py-12 md:pb-36 bg-gray-50 bg-gradient-to-b from-indigo-950 to-violet-900"
     >
+      <div className="absolute inset-0 overflow-hidden">
+        {[...Array(50)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute rounded-full bg-white"
+            style={{
+              width: Math.random() * 2 + 1,
+              height: Math.random() * 2 + 1,
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              opacity: Math.random() * 0.7 + 0.3,
+            }}
+            animate={{
+              opacity: [0.3, 1, 0.3],
+            }}
+            transition={{
+              duration: Math.random() * 3 + 2,
+              repeat: Number.POSITIVE_INFINITY,
+              ease: "easeInOut",
+            }}
+          />
+        ))}
+      </div>
       <div className="container px-4 md:px-6">
         <motion.div
           className="flex flex-col items-center text-center space-y-4 mb-4 xl:mb-12"

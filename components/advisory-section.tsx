@@ -36,7 +36,30 @@ export default function AdvisorySection() {
   ];
 
   return (
-    <section className="w-full py-12 bg-gray-50 overflow-hidden">
+    <section className="w-full relative py-12 bg-gray-50 overflow-hidden bg-gradient-to-b from-indigo-950 to-violet-900">
+      <div className="absolute inset-0 overflow-hidden">
+        {[...Array(50)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute rounded-full bg-white"
+            style={{
+              width: Math.random() * 2 + 1,
+              height: Math.random() * 2 + 1,
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              opacity: Math.random() * 0.7 + 0.3,
+            }}
+            animate={{
+              opacity: [0.3, 1, 0.3],
+            }}
+            transition={{
+              duration: Math.random() * 3 + 2,
+              repeat: Number.POSITIVE_INFINITY,
+              ease: "easeInOut",
+            }}
+          />
+        ))}
+      </div>
       <div className="container px-4 md:px-6">
         <motion.div
           className="flex flex-col items-center text-center space-y-4 mb-12"
@@ -45,10 +68,7 @@ export default function AdvisorySection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-            Advisory Guidelines
-          </h2>
-          <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+          <p className="max-w-[700px] text-gray-200 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
             Aligned to the goals and guidelines of
           </p>
         </motion.div>
@@ -59,23 +79,22 @@ export default function AdvisorySection() {
           className="relative mx-auto w-full max-w-4xl overflow-hidden"
         >
           {[...guidelines, ...guidelines].map((item, index) => (
-            <div
-              key={index}
-              className="flex items-center justify-center p-4 flex-shrink-0"
-            >
-              {item.type === "logo" && (
-                <img
-                  src={item.link}
-                  alt=""
-                  className="h-16 w-auto object-contain"
-                />
-              )}
+            <div key={index} className="p-4 flex-shrink-0 h-full">
+              <div className="h-full bg-white px-2 py-1 rounded-sm flex items-center justify-center">
+                {item.type === "logo" && (
+                  <img
+                    src={item.link}
+                    alt=""
+                    className="h-16 w-auto object-contain"
+                  />
+                )}
 
-              {item.type === "policy" && (
-                <div className="font-[800] text-sm h-[80px] w-[250px] text-center p-4 rounded-md h-full align-middle bg-violet-600 text-white ">
-                  {item.link}
-                </div>
-              )}
+                {item.type === "policy" && (
+                  <div className="font-[800] h-[65px] text-sm w-[250px] text-purple-600 flex items-center justify-center text-center">
+                    <p>{item.link}</p>
+                  </div>
+                )}
+              </div>
             </div>
           ))}
         </Marquee>

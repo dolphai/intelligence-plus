@@ -83,7 +83,7 @@ export default function SchoolBenefits() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-orange-400">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl  text-orange-400">
             School Benefits
           </h2>
           <p className="max-w-[700px] text-gray-200 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
