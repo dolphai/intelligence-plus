@@ -58,21 +58,6 @@ export default function StudentAchievements() {
   return (
     <section className="w-full py-12 relative overflow-hidden">
       <div className="container px-4 md:px-6 relative z-10">
-        <motion.div
-          className="flex flex-col items-center text-center space-y-4 mb-4"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl ">
-            Student Ideas, Innovations and Success Journeys
-          </h2>
-          <p className="max-w-[700px] text-gray-900 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Real Stories, Real Impact
-          </p>
-        </motion.div>
-
         <Carousel
           className="max-w-5xl mx-auto"
           opts={{

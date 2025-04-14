@@ -40,6 +40,20 @@ export const AnimatedAchievements = ({
 
   return (
     <div className="mx-auto px-4 py-12 md:px-8 lg:px-12">
+      <motion.div
+        className="flex flex-col items-center text-center space-y-4 mb-4"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl ">
+          Student Ideas, Innovations and Success Journeys
+        </h2>
+        <p className="max-w-[700px] text-gray-900 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+          Real Stories, Real Impact
+        </p>
+      </motion.div>
       <div className="relative container flex items-center flex-col md:flex-row w-full gap-20 flex-col-reverse">
         <div className="flex flex-col justify-between py-4">
           <motion.div
