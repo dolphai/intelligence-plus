@@ -31,25 +31,25 @@ const achievements = [
   {
     name: "Priyashi Sharma",
     achievement:
-      "9th Grader Priyashi Sharma conceptualizes “Sense Sync” - A cookware for the visually impaired.",
+      "9th Grader Priyashi Sharma conceptualizes “Sense Sync” - A cookware for the visually impaired. ",
     src: "/students/Priyashi-Sharma.png",
   },
   {
     name: "Aashritha Sanjay",
     achievement:
-      "9th Grader Aashritha Sanjay from the Padma Seshadri Bala Bhavan Chennai,category innovates with InnoVision - Making retail accessible to the visually impaired. (2024)",
+      "9th Grader Aashritha Sanjay creates InnoVision - Making retail accessible to the visually impaired.",
     src: "/students/Aashritha-Sanjay.png",
   },
   {
     name: "Rohan Patra",
     achievement:
-      "8th Grader Rohan Patra from The HDFC School, Pune innovates through Medi Bridge - Medicine tracking assistant. (2024)",
+      "8th Grader Rohan Patra  innovates through Medi Bridge - Medicine tracking assistant. (2024)",
     src: "/students/Rohan-Patra.png",
   },
   {
     name: "Kabir Ganesh",
     achievement:
-      "5th Grader Kabir Ganesh from Indus International school, Pune innovates for solving congested washrooms in Trains",
+      "6th Grader, Kabir Ganesh launches social initiative  HUM-DO for well being of street dogs",
     src: "/students/Kabir-Ganesh.png",
   },
 ];
@@ -83,6 +83,7 @@ export default function StudentAchievements() {
             {achievements.map((achievement, index) => (
               <CarouselItem key={index} className="px-4 w-full sm:basis-2/3">
                 <motion.div
+                  key={`yt-${achievement.name}`}
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}

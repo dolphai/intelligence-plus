@@ -37,7 +37,7 @@ export default function PartnersSection() {
           {partners.map((partner, index) => (
             <motion.div
               key={index}
-              className="flex flex-col items-center justify-center p-4 gap-4"
+              className="flex flex-col items-center justify-center p-4 gap-4 shrink-0 w-full"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -47,7 +47,7 @@ export default function PartnersSection() {
               <img
                 src={partner.logo || "/placeholder.svg"}
                 alt="Logo"
-                className="sm:h-28 md:w-[auto] hover:grayscale-0 transition-all duration-300"
+                className="h-full max-h-28 transition-all duration-300"
               />
             </motion.div>
           ))}
