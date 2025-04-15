@@ -14,7 +14,7 @@ export default function GallerySection() {
 
   return (
     <section className="w-full relative py-12 bg-gradient-to-b from-indigo-950 to-violet-900">
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute z-0 inset-0 overflow-hidden">
         {[...Array(50)].map((_, i) => (
           <motion.div
             key={i}
@@ -37,7 +37,7 @@ export default function GallerySection() {
           />
         ))}
       </div>
-      <div className="container px-4 md:px-6">
+      <div className="container relative z-10 px-4 md:px-6">
         <motion.div
           className="flex flex-col items-center text-center space-y-4 mb-12"
           initial={{ opacity: 0, y: 20 }}
@@ -74,7 +74,7 @@ export default function GallerySection() {
         </div>
       </div>
       <motion.div
-        className="py-12 text-center"
+        className="py-12 text-center relative z-10"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}

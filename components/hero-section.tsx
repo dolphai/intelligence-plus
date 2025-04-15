@@ -15,15 +15,12 @@ export default function HeroSection() {
         <div className="container px-4 md:px-6">
           <div className="max-w-3xl text-left space-y-6">
             <motion.div
-              className="w-full flex items-center justify-start gap-5 md:max-h-40 md:max-w-[250px] "
+              className="w-full flex items-center justify-start gap-5 md:max-h-60 max-w-[250px] md:max-w-[350px] "
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.5 }}
             >
-              <img
-                src="/innoventure-logo.png"
-                className="h-full  max-w-[250px]"
-              />
+              <img src="/innoventure-logo.png" className="h-full" />
             </motion.div>
             <motion.div
               className="inline-block rounded-lg bg-white/10 px-3 py-1 text-sm text-white"
