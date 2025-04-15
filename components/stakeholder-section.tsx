@@ -96,7 +96,7 @@ export default function StakeholderSection() {
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
-                  className="max-w-4xl mx-auto bg-violet-50 rounded-xl h-full flex flex-col md:w-[350px] md:h-[630px] lg:w-[450px] lg:h-[550px]" // Added flex and flex-col
+                  className="max-w-4xl mx-auto bg-primary/10 rounded-xl h-full flex flex-col md:w-[350px] md:h-[630px] lg:w-[450px] lg:h-[550px]" // Added flex and flex-col
                 >
                   <div className=" max-h-[250px] w-full">
                     <img

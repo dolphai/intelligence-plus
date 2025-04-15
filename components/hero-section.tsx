@@ -15,14 +15,14 @@ export default function HeroSection() {
         <div className="container px-4 md:px-6">
           <div className="max-w-3xl text-left space-y-6">
             <motion.div
-              className="w-full flex items-center justify-start gap-5 md:max-h-20 md:max-w-[250px] my-5"
+              className="w-full flex items-center justify-start gap-5 md:max-h-40 md:max-w-[250px] "
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.5 }}
             >
               <img
-                src="/foundation-logo.png"
-                className="h-full w-1/2 max-w-[150px]"
+                src="/innoventure-logo.png"
+                className="h-full  max-w-[250px]"
               />
             </motion.div>
             <motion.div
@@ -41,12 +41,12 @@ export default function HeroSection() {
               transition={{ delay: 0.2, duration: 0.7 }}
             >
               Nurturing the Next Generation of{" "}
-              <span className="text-violet-300">Innovators</span> & Changemakers
-              — Starting Today!
+              <span className="text-primary">Innovators</span> & Changemakers —
+              Starting Today!
             </motion.h1>
 
             <motion.div className="text-white">
-              <p className="inline-block rounded-lg bg-white/10 px-3 py-1 text-sm text-white">
+              <p className="text-sm text-white opacity-80">
                 In Collaboration with
               </p>
               <div className="flex items-center gap-5">
@@ -57,7 +57,7 @@ export default function HeroSection() {
 
                 <img
                   src="/partner1.png"
-                  className="h-full w-1/2 max-w-[150px]"
+                  className="h-[60%] w-1/2 max-w-[150px]"
                 />
               </div>
             </motion.div>
@@ -67,7 +67,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.5 }}
             >
-              <Button size="lg" className="bg-violet-600 hover:bg-violet-700">
+              <Button size="lg" className="bg-primary hover:bg-violet-700">
                 <Link
                   href="https://docs.google.com/forms/d/e/1FAIpQLSfBSD35zx1tlJ9H-FCfv2N1VsaEaKuMi8FfOH7cAmQSiGRV0w/viewform"
                   target="_blank"

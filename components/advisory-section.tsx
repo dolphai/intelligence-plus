@@ -68,9 +68,9 @@ export default function AdvisorySection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <p className="max-w-[700px] text-gray-200 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+          <h2 className="text-3xl sm:text-4xl text-white">
             Aligned to the goals and guidelines of
-          </p>
+          </h2>
         </motion.div>
 
         {/* Marquee Container */}
@@ -90,7 +90,7 @@ export default function AdvisorySection() {
                 )}
 
                 {item.type === "policy" && (
-                  <div className="font-[800] h-[65px] text-sm w-[250px] text-purple-600 flex items-center justify-center text-center">
+                  <div className="font-[800] h-[65px] text-sm w-[250px] text-black flex items-center justify-center text-center">
                     <p>{item.link}</p>
                   </div>
                 )}

@@ -33,10 +33,10 @@ export default function StudentBenefits() {
         "Ideation, design thinking, problem-solving, storytelling, pitching, and more",
     },
     {
-      icon: <Mic className="h-10 w-10 text-purple-500" />,
+      icon: <Mic className="h-10 w-10 text-primary" />,
       title: "Participate (Free) in the Innoventure Challenge",
       description:
-        "Present your ideas and earn a certificate from E-Cell of IIT Hyderabad",
+        "Present your ideas and earn a certificate from E-Cell, IIT Hyderabad",
     },
     {
       icon: <Trophy className="h-10 w-10 text-pink-500" />,

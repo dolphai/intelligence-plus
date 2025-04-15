@@ -89,7 +89,7 @@ export default function SchoolBenefits() {
           <p className="max-w-[700px] text-gray-200 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
             Position Your School as a National Innovation Leader
           </p>
-          <Button className="bg-orange-600 hover:bg-violet-700">
+          <Button className="bg-orange-600 hover:bg-primary">
             <Link
               href="https://docs.google.com/forms/d/e/1FAIpQLSfBSD35zx1tlJ9H-FCfv2N1VsaEaKuMi8FfOH7cAmQSiGRV0w/viewform"
               target="_blank"

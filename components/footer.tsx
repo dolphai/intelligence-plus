@@ -8,7 +8,6 @@ import {
   Mail,
   MapPin,
   Phone,
-  Twitter,
   Youtube,
 } from "lucide-react";
 import Link from "next/link";

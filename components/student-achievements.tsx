@@ -63,8 +63,8 @@ export default function StudentAchievements() {
       if (nextRef.current) {
         nextRef.current.click();
       }
-    }, 5000);
-    return clearInterval(timeout);
+    }, 2500);
+    return () => clearInterval(timeout);
   }, []);
   return (
     <section className="w-full py-12 relative overflow-hidden flex items-center flex-col md:flex-row">

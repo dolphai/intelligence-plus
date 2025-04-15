@@ -43,7 +43,7 @@ export default function Navbar() {
               <a
                 href={link}
                 key={`navbar-item-${index}`}
-                className="text-gray-700 hover:text-violet-600"
+                className="text-gray-700 hover:text-primary"
               >
                 {label}
               </a>
@@ -52,7 +52,7 @@ export default function Navbar() {
 
           {/* Login / Signup */}
           <div className="hidden md:flex space-x-4">
-            <button className="px-4 py-2 text-violet-600 border border-violet-600 rounded-lg hover:bg-violet-600 hover:text-white">
+            <button className="px-4 py-2 text-primary border border-primary rounded-lg hover:bg-primary hover:text-white">
               <Link
                 href="https://docs.google.com/forms/d/e/1FAIpQLSfBSD35zx1tlJ9H-FCfv2N1VsaEaKuMi8FfOH7cAmQSiGRV0w/viewform"
                 target="_blank"
