@@ -21,10 +21,6 @@ export default function HeroSection() {
               transition={{ delay: 0.6, duration: 0.5 }}
             >
               <img
-                src="/e-cell-logo.png"
-                className="h-full w-1/2 max-w-[150px]"
-              />
-              <img
                 src="/foundation-logo.png"
                 className="h-full w-1/2 max-w-[150px]"
               />
@@ -49,6 +45,22 @@ export default function HeroSection() {
               — Starting Today!
             </motion.h1>
 
+            <motion.div className="text-white">
+              <p className="inline-block rounded-lg bg-white/10 px-3 py-1 text-sm text-white">
+                In Collaboration with
+              </p>
+              <div className="flex items-center gap-5">
+                <img
+                  src="/e-cell-logo.png"
+                  className="h-full w-1/2 max-w-[150px]"
+                />
+
+                <img
+                  src="/partner1.png"
+                  className="h-full w-1/2 max-w-[150px]"
+                />
+              </div>
+            </motion.div>
             <motion.div
               className="flex flex-col gap-2 sm:flex-row"
               initial={{ opacity: 0, y: 20 }}

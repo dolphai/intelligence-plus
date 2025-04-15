@@ -71,7 +71,7 @@ export default function StakeholderSection() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-            Trusted Voices Transformative Vision
+            Trusted Voices, Transformative Vision
           </h2>
           <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
             Championed by Leaders, Driven by Purpose
